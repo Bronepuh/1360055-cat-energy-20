@@ -1,1 +1,8 @@
-// Начните писать стили здесь
+@import "variables/colors.scss";
+@import "general/total-styles.scss";
+@import "page/page.scss";
+@import "page__body/page__body.scss";
+@import "page-header/page-header.scss";
+@import "page-header__logo/page-header__logo.scss";
+@import "page-header__toggle/page-header__toggle.scss";
+@import "page-header__navigation/page-header__navigation.scss";
