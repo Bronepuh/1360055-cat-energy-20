@@ -1,0 +1,11 @@
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  svg {
+    path {
+      fill: $special-grey-2;
+    }
+  }
+}

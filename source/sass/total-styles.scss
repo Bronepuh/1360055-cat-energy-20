@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "Oswald";
+  src: local("Oswald regular"),
+    local("Oswald-regular"),
+    url("../fonts/oswaldregular.woff2") format("woff2"),
+    url("../fonts/oswaldregular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: local("Oswald medium"),
+    local("Oswald-medium"),
+    url("../fonts/oswaldmedium.woff2") format("woff2"),
+    url("../fonts/oswaldmedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.title {
+  margin: 0;
+  padding-bottom: 20px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
+  color: $basic-black;
+}
+
+.big-title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  color: $basic-black;
+}
+
+.button {
+  display: flex;
+  width: 100%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: $basic-green;
+  color: $basic-white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.button-grey {
+  display: flex;
+  width: 100%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: $basic-grey;
+  color: $text-color;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
