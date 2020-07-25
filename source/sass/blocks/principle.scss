@@ -1,3 +1,13 @@
+.principle {
+  padding-bottom: 20px;
+}
+
+.principle__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .principle__item {
   position: relative;
   display: flex;
@@ -30,4 +40,9 @@
   &:nth-child(4)::before {
     background-image: url("../img/advantage-clock@1x.png");
   }
+}
+
+.principle__description {
+  margin: 0;
+  padding: 0;
 }
