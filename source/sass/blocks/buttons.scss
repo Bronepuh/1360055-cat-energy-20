@@ -20,4 +20,13 @@
     background-color: $basic-grey;
     color: $text-color;
   }
+
+  &--range {
+    width: 70px;
+    min-height: 40px;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: inherit;
+    color: $basic-black;
+  }
 }
