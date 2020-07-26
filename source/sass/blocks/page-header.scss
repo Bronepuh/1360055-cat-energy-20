@@ -1,0 +1,30 @@
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $basic-white;
+}
+
+.page-header__logo {
+  padding-top: 11px;
+  padding-bottom: 18px;
+}
+
+.page-header__toggle {
+  width: 24px;
+  height: 16px;
+  background-color: inherit;
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &--close {
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/icon-close.svg");
+  }
+}

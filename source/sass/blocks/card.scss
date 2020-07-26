@@ -1,0 +1,39 @@
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.card__img {
+  width: 50%;
+  height: auto;
+}
+
+.card__inner {
+  width: 50%;
+}
+
+.card__title {
+  width: 70%;
+  margin: 0;
+  margin-bottom: 18px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $text-color-2;
+}
+
+.card__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card__item {
+  display: flex;
+  justify-content: space-between;
+}
