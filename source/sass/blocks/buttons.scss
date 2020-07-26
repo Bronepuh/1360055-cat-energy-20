@@ -1,0 +1,23 @@
+.button {
+  display: flex;
+  width: 100%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  justify-content: center;
+  align-items: center;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: $basic-green;
+  color: $basic-white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &--secondary {
+    background-color: $basic-grey;
+    color: $text-color;
+  }
+}
