@@ -5,7 +5,7 @@
   padding-bottom: 7px;
   justify-content: center;
   align-items: center;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $oswald;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -19,5 +19,14 @@
   &--secondary {
     background-color: $basic-grey;
     color: $text-color;
+  }
+
+  &--range {
+    width: 70px;
+    min-height: 40px;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: inherit;
+    color: $basic-black;
   }
 }

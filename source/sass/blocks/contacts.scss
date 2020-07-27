@@ -1,0 +1,40 @@
+.contacts {
+  width: 320px;
+}
+
+.contacts__info {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  &--grey {
+    background-color: $basic-grey;
+  }
+}
+
+.contacts__title {
+  width: 50%;
+  font-family: $oswald;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $text-color-3;
+}
+
+.contacts__address {
+  width: 50%;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contacts__map {
+  display: flex;
+  justify-content: center;
+}
+
+.contacts__map iframe {
+  border: 0;
+}

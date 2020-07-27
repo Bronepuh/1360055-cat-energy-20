@@ -1,6 +1,7 @@
 // index
-@import "colors.scss";
+@import "variables.scss";
 @import "global.scss";
+@import "blocks/title.scss";
 @import "blocks/buttons.scss";
 @import "blocks/page.scss";
 @import "blocks/page-body.scss";
@@ -10,6 +11,9 @@
 @import "blocks/promo.scss";
 @import "blocks/programs.scss";
 @import "blocks/principle.scss";
+@import "blocks/example.scss";
+@import "blocks/range.scss";
+@import "blocks/contacts.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/social.scss";
 @import "blocks/copyright.scss";
@@ -18,3 +22,11 @@
 @import "blocks/catalog.scss";
 @import "blocks/card.scss";
 @import "blocks/pagination.scss";
+@import "blocks/additional-goods.scss";
+
+// form
+@import "blocks/form.scss";
+@import "blocks/inputs.scss";
+@import "blocks/radio.scss";
+@import "blocks/textarea.scss";
+@import "blocks/checkbox.scss";

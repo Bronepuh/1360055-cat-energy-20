@@ -1,0 +1,18 @@
+.textarea {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.textarea__input {
+  width: 100%;
+  padding-top: 13px;
+  padding-left: 15px;
+  font-family: $oswald;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $text-color;
+  border: 1px solid $darck-grey-2;
+}
