@@ -41,7 +41,7 @@
   width: 100%;
   margin-top: 0;
   margin-bottom: 10px;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $oswald;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -68,7 +68,7 @@
   padding-top: 60px;
   padding-bottom: 45px;
   margin-bottom: 35px;
-  background-image: url("../../img/gift-photo-mobile@1x.jpg");
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: contain;
 }

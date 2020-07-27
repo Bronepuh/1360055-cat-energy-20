@@ -15,7 +15,7 @@
 
 .contacts__title {
   width: 50%;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $oswald;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -33,8 +33,8 @@
 .contacts__map {
   display: flex;
   justify-content: center;
+}
 
-  iframe {
-    border: 0;
-  }
+.contacts__map iframe {
+  border: 0;
 }

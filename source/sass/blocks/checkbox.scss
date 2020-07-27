@@ -9,10 +9,10 @@
   margin: 0;
   padding: 0;
   list-style: none;
+}
 
-  .checkbox__button:checked + label::before {
-    background-color: yellow;
-  }
+.checkbox__button:checked + label::before {
+  background-color: yellow;
 }
 
 .checkbox__item {
@@ -29,7 +29,7 @@
   position: relative;
   padding-left: 40px;
   margin-bottom: 20px;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $oswald;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

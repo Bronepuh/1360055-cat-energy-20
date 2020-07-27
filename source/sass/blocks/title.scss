@@ -6,25 +6,25 @@
   width: 100%;
   margin: 0;
   padding-bottom: 20px;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $oswald;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
   line-height: 40px;
   color: $basic-black;
+}
 
-  &__name {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    padding-right: 20px;
-    font-family: "Oswald", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 26px;
-    color: $basic-black;
-    background-color: $basic-white;
-    z-index: 1;
-  }
+.title__name {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  padding-right: 20px;
+  font-family: $oswald;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+  color: $basic-black;
+  background-color: $basic-white;
+  z-index: 1;
 }

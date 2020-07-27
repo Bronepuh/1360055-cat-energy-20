@@ -1,4 +1,5 @@
 .form {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -6,7 +7,7 @@
 .form__sentence {
   width: 90%;
   margin-bottom: 40px;
-  font-family: "Oswald", "Aialr", sans-serif;
+  font-family: $oswald;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
