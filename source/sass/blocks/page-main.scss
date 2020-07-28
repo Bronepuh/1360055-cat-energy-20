@@ -1,4 +1,7 @@
 .page-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   background-color: $basic-white;
   min-width: 320px;
   overflow: hidden;
