@@ -3,15 +3,31 @@
   flex-wrap: wrap;
   font-size: 12px;
   line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 40px;
+    background-image: linear-gradient($basic-white 80px, $basic-grey 80px);
+  }
 }
 
 .card__img {
   width: 50%;
   height: auto;
+  background: transparent;
+
+  @media (min-width: $tablet-width) {
+    background-image: transparent;
+  }
 }
 
 .card__inner {
   width: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .card__title {
@@ -31,9 +47,25 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 30px;
+  }
 }
 
 .card__item {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid $special-grey;
+  }
 }

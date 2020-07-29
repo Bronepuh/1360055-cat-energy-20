@@ -1,5 +1,13 @@
 .page-footer {
+  display: grid;
+  align-items: center;
   background-color: $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 .page-footer__copyright {
@@ -9,6 +17,10 @@
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
 
   span {
     font-family: "Arial", sans-serif;
@@ -26,4 +38,8 @@
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-start;
+  }
 }

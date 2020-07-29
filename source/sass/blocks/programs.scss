@@ -19,10 +19,18 @@
   padding-right: 20px;
   padding-top: 30px;
   background-color: $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 75px;
+    padding-left: 52px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+  }
 }
 
 .programs__title {
   position: relative;
+  width: 100%;
   margin: 0;
   padding: 0;
   padding-left: 70px;
@@ -44,6 +52,16 @@
     height: 50px;
     background-color: $basic-green;
     border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      content: "";
+      top: 17px;
+      left: auto;
+      right: 62px;
+      width: 200px;
+      height: 200px;
+    }
   }
 
   &::after {
@@ -57,6 +75,16 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 50%;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      content: "";
+      top: 17px;
+      left: auto;
+      right: 92px;
+      width: 140px;
+      height: 192px;
+    }
   }
 
   &--pro::after {
@@ -65,6 +93,23 @@
     width: 67px;
     height: 50px;
     background-image: url("../img/icon-cat-pro.svg");
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      content: "";
+      top: 17px;
+      left: auto;
+      right: 28px;
+      width: 268px;
+      height: 200px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+    padding-right: 280px;
+    font-size: 36px;
+    line-height: 36px;
   }
 }
 
@@ -81,6 +126,23 @@
     width: 100%;
     height: 1px;
     background-color: $basic-grey-3;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 0;
+    padding-right: 280px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &--pro {
+    @media (min-width: $tablet-width) {
+      padding-right: 315px;
+    }
   }
 }
 
@@ -108,5 +170,10 @@
     background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
     background-size: contain;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }

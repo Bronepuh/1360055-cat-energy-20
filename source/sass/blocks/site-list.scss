@@ -11,9 +11,12 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 60%;
+    width: 75%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    padding-top: 23px;
   }
 }
 
@@ -46,6 +49,8 @@
     width: auto;
     font-size: 18px;
     line-height: 24px;
+    margin-left: 35px;
+    padding-top: 0;
 
     &::before {
       display: none;

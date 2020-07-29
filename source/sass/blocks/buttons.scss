@@ -19,6 +19,10 @@
   &--secondary {
     background-color: $basic-grey;
     color: $text-color;
+
+    @media (min-width: $tablet-width) {
+      padding: 0;
+    }
   }
 
   &--range {
