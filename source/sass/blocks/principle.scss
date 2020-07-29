@@ -20,6 +20,12 @@
     grid-template-columns: 1fr 1fr;
     gap: 37px;
   }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 37px;
+  }
 }
 
 .principle__item {
@@ -71,6 +77,10 @@
 
     @media (min-width: $tablet-width) {
       display: flex;
+    }
+
+    @media (min-width: $tablet-width) {
+      right: 30px;
     }
   }
 

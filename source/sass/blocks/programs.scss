@@ -4,10 +4,16 @@
 }
 
 .programs__list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   padding-top: 20px;
   list-style: none;
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+  }
 }
 
 .programs__item {
@@ -25,6 +31,10 @@
     padding-left: 52px;
     padding-bottom: 20px;
     margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 47.5%;
   }
 }
 
