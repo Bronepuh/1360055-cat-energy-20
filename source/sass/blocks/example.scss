@@ -6,6 +6,10 @@
   padding-top: 27px;
   padding-bottom: 25px;
   background-color: $basic-grey-5;
+
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient($basic-white 55%, $basic-grey-5 45%);
+  }
 }
 
 .example__text {
@@ -67,6 +71,10 @@
   font-size: 12px;
   line-height: 12px;
   background-color: $basic-grey-5;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basic-white;
+  }
 }
 
 .example__inner {
@@ -80,6 +88,22 @@
     justify-content: flex-end;
     width: 50%;
     margin-top: 0;
+  }
+}
+
+.example__title {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: -40px;
+      width: calc(100% + 80px);
+      height: 1px;
+      background-color: $basic-grey-2;
+    }
   }
 }
 
@@ -115,6 +139,11 @@
 .example__picture {
   display: flex;
   margin: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .example__range {

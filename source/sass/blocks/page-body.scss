@@ -2,7 +2,7 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   background-color: $darck-grey;
-  min-width: 320px;
+  min-width: $mobile-width;
   margin: 0 auto;
   font-family: "Arial", sans-serif;
   font-style: normal;
@@ -11,11 +11,11 @@
   line-height: 18px;
   color: $text-color;
 
-  @media (min-width: 768px) {
+  @media (width: $tablet-width) {
     min-width: $tablet-width;
   }
 
-  @media (min-width: 1200px) {
-    max-width: $desktop-width;
+  @media (min-width: $desktop-width) {
+    min-width: $desktop-width;
   }
 }

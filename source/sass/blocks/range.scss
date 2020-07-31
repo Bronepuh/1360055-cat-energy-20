@@ -2,16 +2,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .range__scale {
   display: flex;
   align-items: center;
-  width: 85px;
+  flex-grow: 1;
   height: 14px;
+  margin-left: 12px;
+  margin-right: 12px;
   border: 1px solid $special-grey;
   border-radius: 6px;
   background-color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    height: 6px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: $special-grey-3;
+    border: none;
+  }
 }
 
 .range__sidebar {
@@ -21,4 +33,15 @@
   margin-left: 5px;
   margin-right: 5px;
   border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    box-sizing: content-box;
+    margin-left: 50%;
+    width: 8px;
+    height: 8px;
+    border: 12px solid $basic-white;
+    border-radius: 50%;
+    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.16));
+    cursor: pointer;
+  }
 }
