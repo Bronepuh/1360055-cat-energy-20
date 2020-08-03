@@ -1,11 +1,6 @@
 .catalog {
   display: grid;
   padding-top: 20px;
-  border-top: 1px solid $basic-grey-3;
-
-  @media (min-width: $tablet-width) {
-    border: none;
-  }
 }
 
 .catalog__title {

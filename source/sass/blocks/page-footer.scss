@@ -2,6 +2,7 @@
   display: grid;
   align-items: center;
   background-color: $basic-grey;
+  padding-top: 10px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr 1fr;

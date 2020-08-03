@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  padding-top: 20px;
+  padding-top: 23px;
   list-style: none;
 
   @media (min-width: $desktop-width) {
@@ -56,8 +56,8 @@
   &::before {
     position: absolute;
     content: "";
-    top: -5px;
-    left: 0;
+    top: -6px;
+    left: 2px;
     width: 50px;
     height: 50px;
     background-color: $basic-green;
@@ -77,8 +77,8 @@
   &::after {
     position: absolute;
     content: "";
-    top: -8px;
-    left: 0;
+    top: -9px;
+    left: 2px;
     width: 50px;
     height: 50px;
     background-image: url("../img/icon-cat-slim.svg");
@@ -97,9 +97,14 @@
     }
   }
 
+  &--pro::before {
+    top: -5px;
+    left: 2px;
+  }
+
   &--pro::after {
-    top: -6px;
-    left: -10px;
+    top: -5px;
+    left: -7px;
     width: 67px;
     height: 50px;
     background-image: url("../img/icon-cat-pro.svg");
@@ -126,7 +131,7 @@
 .programs__text {
   position: relative;
   margin: 0;
-  padding-bottom: 20px;
+  padding-bottom: 22px;
 
   &::after {
     position: absolute;
@@ -174,7 +179,7 @@
     content: "";
     top: 50%;
     transform: translateY(-50%);
-    right: -47px;
+    right: -50px;
     width: 32px;
     height: 10px;
     background-image: url("../img/icon-right-arrow-long.svg");

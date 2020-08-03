@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: $basic-white;
+  border-bottom: 1px solid $basic-grey-2;
 }
 
 .page-header__logo {
@@ -31,6 +32,7 @@
   &--close {
     width: 18px;
     height: 18px;
+    margin-right: 3px;
     background-image: url("../img/icon-close.svg");
   }
 

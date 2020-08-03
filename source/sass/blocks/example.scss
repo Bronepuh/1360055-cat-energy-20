@@ -4,7 +4,7 @@
   justify-content: space-between;
   width: 100%;
   padding-top: 27px;
-  padding-bottom: 25px;
+  padding-bottom: 26px;
   background-color: $basic-grey-5;
 
   @media (min-width: $tablet-width) {
@@ -13,7 +13,10 @@
 }
 
 .example__text {
-  width: 87%;
+  width: 98%;
+  margin-bottom: 25px;
+  font-size: 14px;
+  line-height: 18px;
 
   @media (min-width: $tablet-width) {
     width: 98%;
@@ -27,7 +30,7 @@
   width: 100%;
   display: flex;
   margin: 0;
-  padding: 0;
+  margin-bottom: 10px;
   list-style: none;
 
   @media (min-width: $tablet-width) {
@@ -43,8 +46,13 @@
   flex-wrap: wrap;
   width: 50%;
   margin-right: 30px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 13px;
+  padding-bottom: 17px;
+  font-family: $oswald;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
   border: 1px solid $special-grey;
   border-radius: 4px;
 
@@ -64,10 +72,13 @@
 
 .example__item-description {
   position: absolute;
-  bottom: -17px;
+  bottom: -16px;
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
   font-size: 12px;
   line-height: 12px;
   background-color: $basic-grey-5;
@@ -93,6 +104,7 @@
 
 .example__title {
   position: relative;
+  padding-bottom: 18px;
 
   @media (min-width: $tablet-width) {
     &::before {
@@ -111,7 +123,7 @@
   display: flex;
   justify-content: center;
   margin: 0;
-  margin-left: 5px;
+  margin-left: 3px;
   padding: 0;
   font-family: $oswald;
   font-style: normal;
@@ -133,7 +145,8 @@
 .example__inner-2 {
   display: flex;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 33px;
+  margin-bottom: 22px;
 }
 
 .example__picture {
