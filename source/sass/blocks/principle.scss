@@ -1,11 +1,31 @@
 .principle {
+  width: 100%;
   padding-bottom: 20px;
 }
 
+.principle__title {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+}
+
 .principle__list {
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 37px;
+  }
 }
 
 .principle__item {
@@ -15,6 +35,12 @@
   min-height: 60px;
   padding-left: 80px;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-bottom: 80px;
+  }
 
   &::before {
     position: absolute;
@@ -27,22 +53,71 @@
     background-image: url("../img/advantage-leaf@1x.png");
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: 50%;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+      background-size: auto 50px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "1";
+    top: 90px;
+    right: 90px;
+    width: auto;
+    font-family: $oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 280px;
+    color: $basic-grey;
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+    }
+
+    @media (min-width: $tablet-width) {
+      right: 30px;
+    }
   }
 
   &--powder::before {
     background-image: url("../img/advantage-powder@1x.png");
   }
 
+  &--powder::after {
+    content: "2";
+  }
+
   &--dining::before {
     background-image: url("../img/advantage-dining@1x.png");
   }
 
+  &--dining::after {
+    content: "3";
+  }
+
   &--clock::before {
     background-image: url("../img/advantage-clock@1x.png");
+  }
+
+  &--clock::after {
+    content: "4";
   }
 }
 
 .principle__description {
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 245px;
+    padding-top: 110px;
+    font-size: 16px;
+    line-height: 24px;
+    z-index: 1;
+  }
 }

@@ -7,8 +7,14 @@
 }
 
 .page-header__logo {
+  width: 190px;
+  height: auto;
   padding-top: 11px;
-  padding-bottom: 18px;
+  padding-bottom: 11px;
+
+  @media (min-width: $tablet-width) {
+    width: 175px;
+  }
 }
 
 .page-header__toggle {
@@ -26,5 +32,9 @@
     width: 18px;
     height: 18px;
     background-image: url("../img/icon-close.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
   }
 }

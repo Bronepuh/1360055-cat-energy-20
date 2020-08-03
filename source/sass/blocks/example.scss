@@ -1,19 +1,38 @@
 .example {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
   padding-top: 27px;
   padding-bottom: 25px;
   background-color: $basic-grey-5;
+
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient($basic-white 55%, $basic-grey-5 45%);
+  }
 }
 
 .example__text {
   width: 87%;
+
+  @media (min-width: $tablet-width) {
+    width: 98%;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 50px;
+  }
 }
 
 .example__list {
+  width: 100%;
   display: flex;
   margin: 0;
   padding: 0;
-  padding-bottom: 30px;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+  }
 }
 
 .example__item {
@@ -52,20 +71,81 @@
   font-size: 12px;
   line-height: 12px;
   background-color: $basic-grey-5;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basic-white;
+  }
+}
+
+.example__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 25px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    width: 50%;
+    margin-top: 0;
+  }
+}
+
+.example__title {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: -40px;
+      width: calc(100% + 80px);
+      height: 1px;
+      background-color: $basic-grey-2;
+    }
+  }
 }
 
 .example__subtitle {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-left: 5px;
+  padding: 0;
   font-family: $oswald;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
-  text-align: center;
   text-transform: uppercase;
   color: $basic-black;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.example__inner-2 {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
 }
 
 .example__picture {
   display: flex;
   margin: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.example__range {
+  width: 100%;
 }

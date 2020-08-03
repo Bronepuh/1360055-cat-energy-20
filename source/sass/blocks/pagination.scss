@@ -1,3 +1,10 @@
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: transparent;
+}
+
 .pagination__title {
   position: relative;
   display: flex;
@@ -26,4 +33,15 @@
     background-size: contain;
     transform: translate(-50%, -70%);
   }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 200px;
+  }
+}
+
+.pagination__text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }

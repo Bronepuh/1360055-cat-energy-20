@@ -1,4 +1,5 @@
 .additional-goods {
+  width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -68,9 +69,11 @@
   padding-top: 60px;
   padding-bottom: 45px;
   margin-bottom: 35px;
+  background-color: $basic-green-2;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: contain;
+  background-position-x: center;
 }
 
 .additional-goods__promo-picture {

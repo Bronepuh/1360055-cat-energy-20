@@ -12,6 +12,11 @@
   font-size: 36px;
   line-height: 40px;
   color: $basic-black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .title__name {
