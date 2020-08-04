@@ -13,13 +13,13 @@
 }
 
 .example__text {
-  width: 98%;
+  width: 100%;
   margin-bottom: 25px;
   font-size: 14px;
   line-height: 18px;
 
   @media (min-width: $tablet-width) {
-    width: 98%;
+    width: 100%;
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 50px;
@@ -144,6 +144,7 @@
 
 .example__inner-2 {
   display: flex;
+  justify-content: center;
   width: 100%;
   margin-top: 33px;
   margin-bottom: 22px;
@@ -151,12 +152,7 @@
 
 .example__picture {
   display: flex;
-  margin: auto;
-
-  @media (min-width: $tablet-width) {
-    width: 100%;
-    height: auto;
-  }
+  justify-content: center;
 }
 
 .example__range {
