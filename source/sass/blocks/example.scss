@@ -150,9 +150,20 @@
   margin-bottom: 22px;
 }
 
+.example__picture-wrapper {
+  width: 50%;
+  overflow: hidden;
+  outline: 1px dashed green;
+}
+
 .example__picture {
   display: flex;
   justify-content: center;
+  width: 200%;
+
+  &--slim {
+    margin-left: -100%;
+  }
 }
 
 .example__range {
