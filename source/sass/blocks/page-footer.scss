@@ -6,9 +6,15 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 1fr 1fr;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
+}
+
+.page-footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .page-footer__copyright {
@@ -16,20 +22,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 22px;
   padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     justify-content: flex-end;
+    padding-top: 18px;
   }
+}
 
-  span {
-    font-family: "Arial", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 18px;
-    color: $text-color;
+.copyright__text {
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: $text-color;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 72px;
   }
 }
 

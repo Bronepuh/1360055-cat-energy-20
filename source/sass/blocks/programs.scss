@@ -1,6 +1,11 @@
 .programs {
   display: flex;
   justify-content: center;
+  padding-top: 23px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .programs__list {
@@ -8,7 +13,6 @@
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  padding-top: 23px;
   list-style: none;
 
   @media (min-width: $desktop-width) {
@@ -27,9 +31,9 @@
   background-color: $basic-grey;
 
   @media (min-width: $tablet-width) {
-    padding-top: 75px;
+    padding-top: 77px;
     padding-left: 52px;
-    padding-bottom: 20px;
+    padding-bottom: 36px;
     margin-bottom: 30px;
   }
 
@@ -66,9 +70,9 @@
     @media (min-width: $tablet-width) {
       position: absolute;
       content: "";
-      top: 17px;
+      top: 15px;
       left: auto;
-      right: 62px;
+      right: 42px;
       width: 200px;
       height: 200px;
     }
@@ -89,9 +93,9 @@
     @media (min-width: $tablet-width) {
       position: absolute;
       content: "";
-      top: 17px;
+      top: 4px;
       left: auto;
-      right: 92px;
+      right: 72px;
       width: 140px;
       height: 192px;
     }
@@ -102,8 +106,9 @@
     left: 2px;
 
     @media (min-width: $tablet-width) {
-      top: 0;
+      top: 14px;
       left: auto;
+      right: 40px;
     }
   }
 
@@ -117,9 +122,9 @@
     @media (min-width: $tablet-width) {
       position: absolute;
       content: "";
-      top: 17px;
+      top: 14px;
       left: auto;
-      right: 28px;
+      right: 8px;
       width: 268px;
       height: 200px;
     }
@@ -128,6 +133,7 @@
   @media (min-width: $tablet-width) {
     padding-left: 0;
     padding-right: 280px;
+    padding-bottom: 25px;
     font-size: 36px;
     line-height: 36px;
   }
@@ -154,14 +160,14 @@
 
   @media (min-width: $tablet-width) {
     padding-left: 0;
-    padding-right: 280px;
+    padding-right: 260px;
     font-size: 16px;
     line-height: 24px;
   }
 
   &--pro {
     @media (min-width: $tablet-width) {
-      padding-right: 315px;
+      padding-right: 295px;
     }
   }
 }
@@ -190,9 +196,15 @@
     background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
     background-size: contain;
+
+    @media (min-width: $tablet-width) {
+      right: -59px;
+      width: 32px;
+    }
   }
 
   @media (min-width: $tablet-width) {
+    margin-top: 10px;
     font-size: 20px;
     line-height: 30px;
   }
