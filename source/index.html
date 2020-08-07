@@ -12,6 +12,7 @@
   <header class="page-header container">
     <a class="page-header__logo">
       <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
         <img class="logo" src="img/logo-mobile.svg" width="190" alt="логотип-картинка">
       </picture>
@@ -39,6 +40,7 @@
         <h3 class="promo__subtitle">Занялся собой? Займись котом!</h3>
       </div>
       <picture>
+        <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png">
         <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
         <img class="promo__picture" src="img/index-can-mobile@1x.png" width="280" height="270" alt="промо">
       </picture>
@@ -81,43 +83,48 @@
       </ul>
     </section>
     <section class="example">
-      <h2 class="example__title title container">Живой пример</h2>
-      <p class="example__text container">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-        Slim.
-        Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов
-        в день.</p>
-      <ul class="example__list">
-        <li class="example__item">
-          <span class="example__item-value">5 КГ</span>
-          <span class="example__item-description">снижение веса</span>
-        </li>
-        <li class="example__item">
-          <span class="example__item-value">60 ДНЕЙ</span>
-          <span class="example__item-description">затрачено времени</span>
-        </li>
-      </ul>
-      <div class="example__description">
-        <h3 class="example__subtitle">Затраты на питание:</h3>
-        <h3 class="example__subtitle">15 000 РУБ.</h3>
-      </div>
-      <div class="example__image">
-        <div class="example__picture-wrapper">
-          <picture>
-            <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
-            <img class="example__picture" src="img/before-mobile@1x.png" width="311" height="232" alt="картинка кота">
-          </picture>
+      <div class="example__inner-1">
+        <h2 class="example__title title container">Живой пример</h2>
+        <p class="example__text container">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+          Slim.
+          Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов
+          в день.</p>
+        <ul class="example__list">
+          <li class="example__item">
+            <span class="example__item-value">5 КГ</span>
+            <span class="example__item-description">снижение веса</span>
+          </li>
+          <li class="example__item">
+            <span class="example__item-value">60 ДНЕЙ</span>
+            <span class="example__item-description">затрачено времени</span>
+          </li>
+        </ul>
+        <div class="example__description">
+          <h3 class="example__subtitle">Затраты на питание:</h3>
+          <h3 class="example__subtitle">15 000 РУБ.</h3>
         </div>
       </div>
-      <div class="example__range range">
-        <div class="range__controlls">
-          <div class="range__button-wrapper">
-            <button class="button button--range">Было</button>
+      <div class="example__inner-2">
+        <div class="example__image">
+          <div class="example__picture-wrapper">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png">
+              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+              <img class="example__picture" src="img/before-mobile@1x.png" width="311" height="232" alt="картинка кота">
+            </picture>
           </div>
-          <div class="range__scale">
-            <div class="range__sidebar"></div>
-          </div>
-          <div class="range__button-wrapper">
-            <button class="button button--range">Стало</button>
+        </div>
+        <div class="example__range range">
+          <div class="range__controlls">
+            <div class="range__button-wrapper">
+              <button class="button button--range">Было</button>
+            </div>
+            <div class="range__scale">
+              <div class="range__sidebar"></div>
+            </div>
+            <div class="range__button-wrapper">
+              <button class="button button--range">Стало</button>
+            </div>
           </div>
         </div>
       </div>
@@ -149,7 +156,7 @@
         <li class="social__item">
           <a href="#" class="social__link">
             <span class="visually-hidden">Вконтакте</span>
-            <svg class="social__link--vk" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            <svg class="social__link--vk" version="1.1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 12" width="23" height="16"
               style="enable-background:new 0 0 22 12; overflow: visible;" xml:space="preserve">
               <path fill="currentColor" d="M17.6,12c-0.3,0-0.9-0.1-1.5-0.5c-0.5-0.3-0.9-0.7-1.3-1.2c-0.3-0.3-0.9-0.9-1.1-0.9c-0.2,0.1-0.4,0.7-0.3,1.2
@@ -171,7 +178,7 @@
         <li class="social__item">
           <a href="#" class="social__link">
             <span class="visually-hidden">Инстаграм</span>
-            <svg class="social__link--insta" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            <svg class="social__link--insta" version="1.1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16.1 16" width="16" height="16"
               style="enable-background:new 0 0 16.1 16; overflow: visible;" xml:space="preserve">
               <style type="text/css">
@@ -191,7 +198,7 @@
         <li class="social__item">
           <a href="#" class="social__link">
             <span class="visually-hidden">Фейсбук</span>
-            <svg class="social__link--fb" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+            <svg class="social__link--fb" version="1.1" xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 22" width="20" height="21"
               style="enable-background:new 0 0 10 21; overflow: visible;" xml:space="preserve">
               <path fill="currentColor" d="M7.1,19H2v-8.8H0V5.8h1.9C1.8,3.8,2.1,2.4,3,1.4C3.8,0.5,5,0.1,6.5,0H10v4.2H7.2C7.1,4.4,7,5,7,5.8h3v4.4H7.1V19z M3.1,18

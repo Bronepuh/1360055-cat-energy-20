@@ -11,6 +11,22 @@
     padding-top: 24px;
     border: none;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 52px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      width: 720px;
+      height: 694px;
+      background-image: url("../../img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
 }
 
 .page-header__toggle {
@@ -40,5 +56,9 @@
 .page-header__navigation {
   @media (min-width: $tablet-width) {
     padding-top: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 12px;
   }
 }

@@ -40,6 +40,12 @@
   @media (min-width: $desktop-width) {
     width: 47.5%;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 46.7%;
+    padding-top: 77px;
+    padding-bottom: 39px;
+  }
 }
 
 .programs__title {
@@ -76,6 +82,13 @@
       width: 200px;
       height: 200px;
     }
+
+    @media (min-width: $desktop-width) {
+      top: -30px;
+      left: 0;
+      width: 100px;
+      height: 100px;
+    }
   }
 
   &::after {
@@ -99,6 +112,13 @@
       width: 140px;
       height: 192px;
     }
+
+    @media (min-width: $desktop-width) {
+      top: -36px;
+      left: 15px;
+      width: 70px;
+      height: 97px;
+    }
   }
 
   &--pro::before {
@@ -109,6 +129,13 @@
       top: 14px;
       left: auto;
       right: 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -30px;
+      left: 0;
+      width: 100px;
+      height: 100px;
     }
   }
 
@@ -128,6 +155,13 @@
       width: 268px;
       height: 200px;
     }
+
+    @media (min-width: $desktop-width) {
+      top: -32px;
+      left: -19px;
+      width: 134px;
+      height: 100px;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -136,6 +170,12 @@
     padding-bottom: 25px;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 162px;
+    padding-right: 0;
+    padding-bottom: 75px;
   }
 }
 
@@ -165,9 +205,17 @@
     line-height: 24px;
   }
 
+  @media (min-width: $desktop-width) {
+    padding-right: 20px;
+  }
+
   &--pro {
     @media (min-width: $tablet-width) {
       padding-right: 295px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 20px;
     }
   }
 }
@@ -191,15 +239,20 @@
     top: 50%;
     transform: translateY(-50%);
     right: -50px;
-    width: 32px;
-    height: 10px;
-    background-image: url("../img/icon-right-arrow-long.svg");
+    width: 34px;
+    height: 12px;
+    background-image: url("../../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% auto;
 
     @media (min-width: $tablet-width) {
       right: -59px;
       width: 32px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 15px;
+      right: -60px;
     }
   }
 
@@ -207,5 +260,10 @@
     margin-top: 10px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 3px;
+    padding-top: 0;
   }
 }

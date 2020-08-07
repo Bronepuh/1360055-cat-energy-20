@@ -1,4 +1,5 @@
 .contacts {
+  position: relative;
   width: 100%;
 }
 
@@ -12,6 +13,17 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 570px;
+    height: 201px;
+    padding-left: 75px;
+    padding-right: 90px;
+    background-color: $basic-white;
   }
 
   &--grey {
@@ -40,6 +52,11 @@
     font-size: 20px;
     line-height: 25px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 40%;
+    padding-left: 0;
+  }
 }
 
 .contacts__address {
@@ -57,6 +74,13 @@
     font-size: 16px;
     line-height: 20px;
     text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+    width: 50%;
+    padding-right: 0;
+    padding-left: 48px;
   }
 
   &--street {

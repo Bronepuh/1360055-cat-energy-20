@@ -6,6 +6,11 @@
   @media (min-width: $tablet-width) {
     padding-top: 15px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 41px;
+    padding-bottom: 0;
+  }
 }
 
 .principle__title {
@@ -32,7 +37,7 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 37px;
+    column-gap: 80px;
   }
 }
 
@@ -87,6 +92,10 @@
       display: flex;
       right: 95px;
     }
+
+    @media (min-width: $desktop-width) {
+      right: 15px;
+    }
   }
 
   &--powder::before {
@@ -96,26 +105,46 @@
   &--powder::after {
     content: "2";
     right: 79px;
+
+    @media (min-width: $desktop-width) {
+      right: 0;
+    }
   }
 
   &--dining::before {
     top: -1px;
     background-image: url("../img/advantage-dining@1x.png");
+
+    @media (min-width: $desktop-width) {
+      top: 0;
+    }
   }
 
   &--dining::after {
     content: "3";
     right: 78px;
+
+    @media (min-width: $desktop-width) {
+      right: -2px;
+    }
   }
 
   &--clock::before {
     top: -1px;
     background-image: url("../img/advantage-clock@1x.png");
+
+    @media (min-width: $desktop-width) {
+      top: 0;
+    }
   }
 
   &--clock::after {
     content: "4";
     right: 76px;
+
+    @media (min-width: $desktop-width) {
+      right: -3px;
+    }
   }
 }
 
@@ -129,5 +158,9 @@
     font-size: 16px;
     line-height: 24px;
     z-index: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 112px;
   }
 }

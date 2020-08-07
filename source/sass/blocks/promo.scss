@@ -15,12 +15,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    justify-content: flex-start;
-    width: 100%;
-    background-image: url("../../img/index-background-desktop@1x.jpg");
-    background-size: 50%;
-    background-position-x: right;
-    color: $basic-black;
+    justify-content: start;
+    z-index: 1;
+    background: transparent;
+    margin-bottom: 136px;
   }
 }
 
@@ -53,11 +51,12 @@
     font-size: 60px;
     line-height: 60px;
     color: $basic-black;
+  }
 
-    @media (min-width: $desktop-width) {
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
+  @media (min-width: $desktop-width) {
+    margin-top: 96px;
+    margin-bottom: 0;
+    padding-left: 80px;
   }
 }
 
@@ -81,6 +80,12 @@
     line-height: 20px;
     color: $basic-black;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    margin-bottom: 195px;
+    padding-left: 80px;
+  }
 }
 
 .promo__picture {
@@ -91,8 +96,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 450px;
+    width: 552px;
     height: auto;
+    margin-top: 14px;
+    margin-left: -162px;
   }
 }
 
@@ -113,6 +120,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: 350px;
+    top: 328px;
+    left: 190px;
   }
 }
