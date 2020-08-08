@@ -1,10 +1,10 @@
 .catalog {
   display: grid;
-  padding-top: 20px;
+  padding-top: 26px;
 }
 
 .catalog__title {
-  padding-bottom: 30px;
+  padding-bottom: 39px;
 }
 
 .catalog__list {
@@ -30,7 +30,6 @@
   position: relative;
   display: flex;
   margin-bottom: 25px;
-  padding-top: 20px;
 
   &::before {
     position: absolute;
