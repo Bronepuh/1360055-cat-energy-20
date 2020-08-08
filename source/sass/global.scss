@@ -53,9 +53,14 @@
 .line {
   position: absolute;
   content: "";
-  top: 15px;
+  top: 16px;
   right: -40px;
   width: calc(100% + 40px);
   height: 2px;
   background-color: $basic-green;
+
+  @media (min-width: $tablet-width) {
+    top: 22px;
+    width: calc(100% + 80px);
+  }
 }

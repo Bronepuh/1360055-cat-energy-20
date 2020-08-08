@@ -1,7 +1,11 @@
 .additional-goods {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 27px;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 41px;
+  }
 }
 
 .additional-goods__list {
@@ -18,6 +22,14 @@
     width: 100%;
     height: 1px;
     background-color: $special-grey;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 47px;
   }
 }
 
@@ -26,15 +38,24 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 20px;
+  padding-top: 15px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid $special-grey;
 
-  &::after {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background-color: $special-grey;
+  @media (min-width: $tablet-width) {
+    align-items: center;
+    border: 1px solid $special-grey;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 37px;
+    padding-right: 37px;
+    padding-top: 26px;
+    padding-bottom: 27px;
+    border-bottom: none;
+
+    &:last-child {
+      border-bottom: 1px solid $special-grey;
+    }
   }
 }
 
@@ -49,15 +70,41 @@
   line-height: 16px;
   text-transform: uppercase;
   color: $text-color-2;
+
+  @media (min-width: $tablet-width) {
+    width: calc(50% - 95px);
+    font-size: 20px;
+    line-height: 19px;
+  }
 }
 
 .additional-goods__quantity {
   width: 80%;
+
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    text-align: end;
+  }
+}
+
+.additional-goods__price {
+  @media (min-width: $tablet-width) {
+    text-align: end;
+    width: 95px;
+  }
 }
 
 .additional-goods__button {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 13px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 16px;
+  line-height: 0px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 16px;
+    padding-bottom: 20px;
+  }
 }
 
 .additional-goods__promo {
@@ -66,9 +113,9 @@
   justify-content: center;
   align-items: flex-end;
   min-height: 290px;
-  padding-top: 60px;
-  padding-bottom: 45px;
-  margin-bottom: 35px;
+  padding-top: 58px;
+  padding-bottom: 43px;
+  margin-bottom: 14px;
   background-color: $basic-green-2;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;

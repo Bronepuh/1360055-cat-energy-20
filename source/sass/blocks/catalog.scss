@@ -1,6 +1,10 @@
 .catalog {
   display: grid;
   padding-top: 26px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 50px;
+  }
 }
 
 .catalog__title {
@@ -15,13 +19,14 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    column-gap: 60px;
+    row-gap: 15px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 80px;
+    column-gap: 80px;
   }
 }
 
@@ -30,6 +35,10 @@
   position: relative;
   display: flex;
   margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 
   &::before {
     position: absolute;

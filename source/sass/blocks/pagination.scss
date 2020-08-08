@@ -31,11 +31,21 @@
     background-image: url("../img/icon-plus.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    transform: translate(-50%, -70%);
+    transform: translate(-50%, -80%);
+
+    @media (min-width: $tablet-width) {
+      width: 60px;
+      height: 60px;
+      top: 63%;
+    }
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 200px;
+    width: 60%;
+    padding-top: 290px;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
   }
 }
 
@@ -44,4 +54,29 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  margin-top: 8px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 80%;
+    margin-top: 0;
+    margin-bottom: 35px;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+  }
+}
+
+.pagination__button {
+  font-size: 16px;
+  line-height: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    align-self: flex-end;
+    height: 40px;
+    font-size: 16px;
+    line-height: 0px;
+  }
 }
