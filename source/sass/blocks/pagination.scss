@@ -21,6 +21,19 @@
   text-transform: uppercase;
   color: $text-color-3;
 
+  @media (min-width: $tablet-width) {
+    width: 60%;
+    padding-top: 290px;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 80%;
+    padding-top: 286px;
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -38,14 +51,10 @@
       height: 60px;
       top: 63%;
     }
-  }
 
-  @media (min-width: $tablet-width) {
-    width: 60%;
-    padding-top: 290px;
-    font-size: 20px;
-    line-height: 22px;
-    text-align: center;
+    @media (min-width: $desktop-width) {
+      top: 64%;
+    }
   }
 }
 
@@ -64,6 +73,10 @@
     font-size: 16px;
     line-height: 18px;
     text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
   }
 }
 

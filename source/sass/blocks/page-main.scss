@@ -11,5 +11,13 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 27px;
+  padding-top: 25px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 59px;
+  }
 }

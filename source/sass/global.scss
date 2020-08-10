@@ -48,12 +48,24 @@
     padding-left: 110px;
     padding-right: 110px;
   }
+
+  &--form {
+    @media (min-width: $tablet-width) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
 
 .line {
   position: absolute;
   content: "";
-  top: 16px;
+  top: 15px;
   right: -40px;
   width: calc(100% + 40px);
   height: 2px;
@@ -61,6 +73,13 @@
 
   @media (min-width: $tablet-width) {
     top: 22px;
-    width: calc(100% + 80px);
+    right: -70px;
+    width: calc(100% + 140px);
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 30px;
+    right: -110px;
+    width: calc(100% + 220px);
   }
 }

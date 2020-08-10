@@ -21,10 +21,10 @@
       aria-label="переключатель главного меню"></button>
     <nav class="page-header__navigation site-list site-list--open">
       <div class="site-list__item">
-        <a class="site-list__link site-list__link--active" href="index.html">главная</a>
+        <a class="site-list__link" href="index.html">главная</a>
       </div>
       <div class="site-list__item">
-        <a class="site-list__link" href="catalog.html">каталог продукции</a>
+        <a class="site-list__link site-list__link--active" href="catalog.html">каталог продукции</a>
       </div>
       <div class="site-list__item">
         <a class="site-list__link" href="form.html">подбор программы</a>
@@ -40,6 +40,7 @@
           <div class="card__inner">
             <div class="card__window">
               <picture class="card__img-wrapper">
+                <source media="(min-width: 1440px)" srcset="img/chicken-small-desktop@1x.png">
                 <source media="(min-width: 768px)" srcset="img/chicken-small-tablet@1x.png">
                 <img class="card__img card__img--chicken-small" src="img/chicken-small-mobile@1x.jpg" width="140"
                   height="112" alt="картинка товара">
@@ -69,6 +70,7 @@
           <div class="card__inner">
             <div class="card__window">
               <picture class="card__img-wrapper">
+                <source media="(min-width: 1440px)" srcset="img/chicken-big-desktop@1x.png">
                 <source media="(min-width: 768px)" srcset="img/chicken-big-tablet@1x.png">
                 <img class="card__img card__img--chicken-big" src="img/chicken-big-mobile@1x.jpg" width="140"
                   height="112" alt="картинка товара">
@@ -98,6 +100,7 @@
           <div class="card__inner">
             <div class="card__window">
               <picture class="card__img-wrapper">
+                <source media="(min-width: 1440px)" srcset="img/fish-small-desktop@1x.png">
                 <source media="(min-width: 768px)" srcset="img/fish-small-tablet@1x.png">
                 <img class="card__img card__img--fish-small" src="img/fish-small-mobile@1x.jpg" width="140"
                   height="112" alt="картинка товара">
@@ -127,6 +130,7 @@
           <div class="card__inner">
             <div class="card__window">
               <picture class="card__img-wrapper">
+                <source media="(min-width: 1440px)" srcset="img/fish-big-desktop@1x.png">
                 <source media="(min-width: 768px)" srcset="img/fish-big-tablet@1x.png">
                 <img class="card__img card__img--fish-big" src="img/fish-big-mobile@1x.jpg" width="140"
                   height="112" alt="картинка товара">
@@ -156,6 +160,7 @@
           <div class="card__inner">
             <div class="card__window">
               <picture class="card__img-wrapper">
+                <source media="(min-width: 1440px)" srcset="img/buckwheat-small-desktop@1x.png">
                 <source media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.png">
                 <img class="card__img card__img--buckwheat-small" src="img/buckwheat-small-mobile@1x.jpg" width="140" height="112" alt="картинка товара">
               </picture>
@@ -184,6 +189,7 @@
           <div class="card__inner">
             <div class="card__window">
               <picture class="card__img-wrapper">
+                <source media="(min-width: 1440px)" srcset="img/buckwheat-big-desktop@1x.png">
                 <source media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.png">
                 <img class="card__img card__img--buckwheat-big" src="img/buckwheat-big-mobile@1x.jpg" width="140" height="112" alt="картинка товара">
               </picture>
@@ -275,12 +281,13 @@
         </li>
       </ul>
       <div class="additional-goods__promo">
-        <img class="additional-goods__promo-picture" src="img/icon-gift.svg" width="78" height="80" alt="акция">
+        <div class="additional-goods__promo-image">
+          <img class="additional-goods__promo-picture" src="img/icon-gift.svg" width="78" height="80" alt="акция">
+        </div>
         <p class="additional-goods__promo-description">Закажите все <br> и получите чехол для кота в подарок!</p>
 
       </div>
     </section>
-    <section class="contacts">
       <section class="contacts">
         <div class="contacts__info contacts__info--grey container">
           <h3 class="contacts__title">

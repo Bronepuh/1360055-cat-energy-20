@@ -1,12 +1,17 @@
 .textarea {
   display: flex;
+  width: 100%;
   margin-bottom: 20px;
 }
 
 .textarea__input {
-  width: 100%;
-  padding-top: 13px;
+  display: block;
+  min-width: 280px;
+  min-height: 151px;
+  padding-top: 14px;
   padding-left: 15px;
+  padding-bottom: 16px;
+  margin-bottom: 7px;
   font-family: $oswald;
   font-style: normal;
   font-weight: normal;
@@ -15,4 +20,21 @@
   text-transform: uppercase;
   color: $text-color;
   border: 1px solid $darck-grey-2;
+
+  @media (min-width: $tablet-width) {
+    min-width: 630px;
+    min-height: 174px;
+    margin-top: 43px;
+    margin-bottom: 45px;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 1220px;
+    letter-spacing: -0.1px;
+    margin-bottom: 41px;
+  }
 }
