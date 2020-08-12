@@ -5,8 +5,8 @@
   align-items: center;
   width: 100%;
   margin: 0;
-  padding-bottom: 20px;
-  font-family: $oswald;
+  padding-bottom: 33px;
+  font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
@@ -19,12 +19,17 @@
   }
 }
 
+.title__name-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .title__name {
   display: flex;
   margin: 0;
   padding: 0;
   padding-right: 20px;
-  font-family: $oswald;
+  font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -32,4 +37,32 @@
   color: $basic-black;
   background-color: $basic-white;
   z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding-left: 38px;
+    padding-right: 40px;
+    margin-left: -39px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 7px;
+    margin-left: -37px;
+  }
+
+  &--first {
+    @media (min-width: $tablet-width) {
+      margin-left: -39px;
+      padding-right: 0;
+    }
+  }
+
+  &--second {
+    @media (min-width: $tablet-width) {
+      padding-left: 9px;
+      padding-right: 43px;
+      margin-left: 0;
+    }
+  }
 }

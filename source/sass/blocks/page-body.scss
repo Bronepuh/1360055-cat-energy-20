@@ -1,7 +1,6 @@
 .page-body {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-  background-color: $darck-grey;
   min-width: $mobile-width;
   margin: 0 auto;
   font-family: "Arial", sans-serif;
@@ -10,6 +9,7 @@
   font-size: 14px;
   line-height: 18px;
   color: $text-color;
+  background-color: $basic-white;
 
   @media (width: $tablet-width) {
     min-width: $tablet-width;

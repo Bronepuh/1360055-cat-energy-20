@@ -1,6 +1,11 @@
 .radio {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: $desktop-width) {
+    width: 46.9%;
+  }
 }
 
 .radio__list {
@@ -8,10 +13,24 @@
   flex-wrap: wrap;
   align-items: center;
   width: 100%;
+  flex-grow: 1;
   margin: 0;
-  margin-bottom: 13px;
+  margin-bottom: 30px;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+    border: 1px solid $darck-grey-2;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
 }
 
 .radio__button:checked + label::before {
@@ -20,7 +39,19 @@
 
 .radio__item {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .radio__button {
@@ -30,9 +61,9 @@
 .radio__label {
   width: 100%;
   position: relative;
-  padding-left: 40px;
+  padding-left: 45px;
   margin-bottom: 20px;
-  font-family: $oswald;
+  font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -50,5 +81,17 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+      left: 29px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 89px;
   }
 }

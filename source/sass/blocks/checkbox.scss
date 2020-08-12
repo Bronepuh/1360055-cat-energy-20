@@ -1,14 +1,27 @@
 .checkbox {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .checkbox__list {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
   margin: 0;
+  margin-top: 7px;
+  margin-bottom: 17px;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .checkbox__button:checked + label::before {
@@ -16,8 +29,21 @@
 }
 
 .checkbox__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+
+  @media (min-width: $tablet-width) {
+    width: 45.2%;
+    margin-bottom: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 20%;
+    margin-bottom: 28px;
+  }
 }
 
 .checkbox__button {
@@ -27,9 +53,9 @@
 .checkbox__label {
   width: 100%;
   position: relative;
-  padding-left: 40px;
+  padding-left: 45px;
   margin-bottom: 20px;
-  font-family: $oswald;
+  font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -37,14 +63,26 @@
   text-transform: uppercase;
   color: $text-color-2;
 
+  @media (min-width: $tablet-width) {
+    padding-left: 60px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
   &::before {
     position: absolute;
     content: "";
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
     background-color: yellowgreen;
     top: 50%;
     left: 0;
-    transform: translateY(-50%);
+    transform: translateY(-47%);
+
+    @media (min-width: $tablet-width) {
+      top: 42%;
+      width: 40px;
+      height: 40px;
+    }
   }
 }

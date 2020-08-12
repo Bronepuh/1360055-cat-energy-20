@@ -15,12 +15,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    justify-content: flex-start;
-    width: 100%;
-    background-image: url("../../img/index-background-desktop@1x.jpg");
-    background-size: 50%;
-    background-position-x: right;
-    color: $basic-black;
+    justify-content: start;
+    z-index: 1;
+    background: transparent;
+    margin-bottom: 136px;
   }
 }
 
@@ -37,7 +35,8 @@
 
 .promo__title {
   width: 100%;
-  font-family: $oswald;
+  margin-bottom: 10px;
+  font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
@@ -46,22 +45,25 @@
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
-    padding-left: 90px;
+    padding-left: 88px;
+    margin-bottom: 20px;
     text-align: left;
     font-size: 60px;
     line-height: 60px;
     color: $basic-black;
+  }
 
-    @media (min-width: $desktop-width) {
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
+  @media (min-width: $desktop-width) {
+    margin-top: 96px;
+    margin-bottom: 0;
+    padding-left: 80px;
   }
 }
 
 .promo__subtitle {
   width: 100%;
-  font-family: $oswald;
+  margin-bottom: 28px;
+  font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -72,34 +74,53 @@
 
   @media (min-width: $tablet-width) {
     padding-left: 90px;
+    margin-bottom: 20px;
     text-align: left;
     font-size: 20px;
     line-height: 20px;
     color: $basic-black;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    margin-bottom: 195px;
+    padding-left: 80px;
+  }
 }
 
 .promo__picture {
   @media (min-width: $tablet-width) {
+    display: block;
     width: 709px;
     height: auto;
   }
 
   @media (min-width: $desktop-width) {
-    width: 450px;
+    width: 552px;
     height: auto;
+    margin-top: 14px;
+    margin-left: -162px;
   }
 }
 
 .promo__button {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  font-size: 14px;
+  line-height: 18px;
+
   @media (min-width: $tablet-width) {
     position: absolute;
+    top: 279px;
+    left: 112px;
     width: 244px;
-    top: 300px;
-    left: 120px;
+    height: 54px;
+    font-size: 20px;
+    line-height: 0px;
   }
 
   @media (min-width: $desktop-width) {
-    top: 350px;
+    top: 328px;
+    left: 190px;
   }
 }

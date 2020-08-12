@@ -36,17 +36,35 @@
 }
 
 .container {
+  min-width: 320px;
+  max-width: 550px;
   padding-left: 20px;
   padding-right: 20px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
+    min-width: 768px;
+    max-width: 1000px;
     padding-left: 30px;
     padding-right: 30px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 40px;
-    padding-right: 40px;
+    max-width: 1440px;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  &--form {
+    @media (min-width: $tablet-width) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 
@@ -58,4 +76,16 @@
   width: calc(100% + 40px);
   height: 2px;
   background-color: $basic-green;
+
+  @media (min-width: $tablet-width) {
+    top: 22px;
+    right: -70px;
+    width: calc(100% + 140px);
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 30px;
+    right: -110px;
+    width: calc(100% + 220px);
+  }
 }

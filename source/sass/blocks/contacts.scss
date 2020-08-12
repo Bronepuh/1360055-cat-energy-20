@@ -1,12 +1,30 @@
 .contacts {
-  width: 100vw;
+  position: relative;
+  width: 100%;
 }
 
 .contacts__info {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 10px;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 15px;
   padding-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 570px;
+    height: 201px;
+    padding-left: 75px;
+    padding-right: 90px;
+    background-color: $basic-white;
+  }
 
   &--grey {
     background-color: $basic-grey;
@@ -14,25 +32,82 @@
 }
 
 .contacts__title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   width: 50%;
-  font-family: $oswald;
+  margin-top: 12px;
+  font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: $text-color-3;
+
+  @media (min-width: $tablet-width) {
+    width: 30%;
+    padding-top: 39px;
+    padding-left: 41px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 40%;
+    padding-left: 0;
+  }
 }
 
 .contacts__address {
+  display: flex;
+  flex-wrap: wrap;
   width: 50%;
   font-size: 14px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    width: 35%;
+    padding-top: 43px;
+    padding-right: 42px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+    width: 50%;
+    padding-right: 0;
+    padding-left: 48px;
+  }
+
+  &--street {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      line-height: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  &--city {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+  }
 }
 
 .contacts__map {
   display: flex;
   justify-content: center;
+  height: 362px;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
 }
 
 .contacts__map iframe {

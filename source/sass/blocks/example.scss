@@ -4,22 +4,90 @@
   justify-content: space-between;
   width: 100%;
   padding-top: 27px;
-  padding-bottom: 25px;
+  padding-bottom: 26px;
   background-color: $basic-grey-5;
 
   @media (min-width: $tablet-width) {
     background-image: linear-gradient($basic-white 55%, $basic-grey-5 45%);
+    padding-top: 0;
+    padding-bottom: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+  }
+}
+
+.example__inner-1 {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 48.1%;
+  }
+}
+
+.example__inner-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 50%;
+    margin-left: 15px;
+  }
+}
+
+.example__title {
+  position: relative;
+  padding-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 43px;
+    padding-bottom: 48px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: -40px;
+      width: calc(100% + 80px);
+      height: 1px;
+      background-color: $basic-grey-2;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 45px;
   }
 }
 
 .example__text {
-  width: 87%;
+  width: 100%;
+  margin-bottom: 25px;
+  padding-right: 30px;
+  font-size: 14px;
+  line-height: 18px;
 
   @media (min-width: $tablet-width) {
-    width: 98%;
+    width: 100%;
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 50px;
+    margin-bottom: 53px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 100px;
+    padding-right: 150px;
+    margin-bottom: 67px;
   }
 }
 
@@ -27,11 +95,21 @@
   width: 100%;
   display: flex;
   margin: 0;
+  margin-bottom: 10px;
   padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
   list-style: none;
 
   @media (min-width: $tablet-width) {
-    width: 50%;
+    width: 51.5%;
+    padding-left: 30px;
+    padding-right: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 68.7%;
+    padding-left: 110px;
   }
 }
 
@@ -43,13 +121,23 @@
   flex-wrap: wrap;
   width: 50%;
   margin-right: 30px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 13px;
+  padding-bottom: 17px;
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
   border: 1px solid $special-grey;
   border-radius: 4px;
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 42px;
+    padding-top: 15px;
   }
 }
 
@@ -60,50 +148,63 @@
   font-size: 24px;
   line-height: 24px;
   color: $basic-black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__item-description {
+  display: flex;
+  justify-content: center;
   position: absolute;
-  bottom: -17px;
+  bottom: -16px;
+  width: 60%;
   padding-left: 20px;
   padding-right: 20px;
-  text-align: center;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
   font-size: 12px;
   line-height: 12px;
+  text-align: center;
   background-color: $basic-grey-5;
 
   @media (min-width: $tablet-width) {
+    bottom: -7px;
+    width: 85%;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 14px;
+    line-height: 14px;
     background-color: $basic-white;
   }
 }
 
-.example__inner {
+.example__description {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
   width: 100%;
   margin-top: 25px;
 
   @media (min-width: $tablet-width) {
     justify-content: flex-end;
-    width: 50%;
+    width: 48.5%;
     margin-top: 0;
+    padding-right: 30px;
+    padding-left: 0;
+    padding-top: 12px;
+    padding-bottom: 10px;
   }
-}
 
-.example__title {
-  position: relative;
-
-  @media (min-width: $tablet-width) {
-    &::before {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: -40px;
-      width: calc(100% + 80px);
-      height: 1px;
-      background-color: $basic-grey-2;
-    }
+  @media (min-width: $desktop-width) {
+    width: 56%;
+    padding-right: 0;
+    margin-top: 40px;
+    margin-left: 100px;
   }
 }
 
@@ -111,9 +212,9 @@
   display: flex;
   justify-content: center;
   margin: 0;
-  margin-left: 5px;
+  margin-left: 3px;
   padding: 0;
-  font-family: $oswald;
+  font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -127,20 +228,84 @@
     width: 100%;
     margin: 0;
     padding: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: center;
+    width: 50%;
   }
 }
 
-.example__inner-2 {
+.example__image {
+  position: relative;
   display: flex;
+  justify-content: center;
   width: 100%;
-  margin-top: 30px;
+  height: auto;
+  margin-top: 33px;
+  margin-bottom: 22px;
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      width: calc(50% + 29px);
+      height: 100%;
+      background-color: white;
+      background-image: url("../../img/after-tablet@1x.png");
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      background-position-x: calc(100% - 45px);
+    }
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      width: calc(50% - 5px);
+      height: 516px;
+      background-color: white;
+      background-image: url("../../img/after-desktop@1x.png");
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      background-position-x: calc(100% + 9%);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 77px;
+    margin-left: 45px;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-top: -8px;
+    margin-left: -28px;
+  }
+}
+
+.example__picture-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: auto;
 }
 
 .example__picture {
   display: flex;
-  margin: auto;
+  justify-content: center;
+  width: 100%;
+  height: auto;
 
   @media (min-width: $tablet-width) {
+    display: flex;
     width: 100%;
     height: auto;
   }

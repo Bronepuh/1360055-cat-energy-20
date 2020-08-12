@@ -1,22 +1,24 @@
-// index
 @import "variables.scss";
 @import "global.scss";
 @import "blocks/title.scss";
 @import "blocks/buttons.scss";
+@import "blocks/logo.scss";
 @import "blocks/page.scss";
 @import "blocks/page-body.scss";
 @import "blocks/page-header.scss";
 @import "blocks/site-list.scss";
 @import "blocks/page-main.scss";
+@import "blocks/contacts.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/social.scss";
+@import "blocks/copyright.scss";
+
+// index
 @import "blocks/promo.scss";
 @import "blocks/programs.scss";
 @import "blocks/principle.scss";
 @import "blocks/example.scss";
 @import "blocks/range.scss";
-@import "blocks/contacts.scss";
-@import "blocks/page-footer.scss";
-@import "blocks/social.scss";
-@import "blocks/copyright.scss";
 
 // catalog
 @import "blocks/catalog.scss";

@@ -1,11 +1,23 @@
 .principle {
   width: 100%;
-  padding-bottom: 20px;
+  padding-top: 9px;
+  padding-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 41px;
+    padding-bottom: 0;
+  }
 }
 
 .principle__title {
+  margin-bottom: 4px;
+
   @media (min-width: $tablet-width) {
-    margin-bottom: 30px;
+    margin-bottom: 52px;
   }
 }
 
@@ -18,13 +30,14 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 37px;
+    column-gap: 59px;
+    row-gap: 55px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 37px;
+    column-gap: 80px;
   }
 }
 
@@ -65,10 +78,10 @@
   &::after {
     position: absolute;
     content: "1";
-    top: 90px;
+    top: 92px;
     right: 90px;
     width: auto;
-    font-family: $oswald;
+    font-family: $primary-font;
     font-style: normal;
     font-weight: normal;
     font-size: 280px;
@@ -77,10 +90,11 @@
 
     @media (min-width: $tablet-width) {
       display: flex;
+      right: 95px;
     }
 
-    @media (min-width: $tablet-width) {
-      right: 30px;
+    @media (min-width: $desktop-width) {
+      right: 15px;
     }
   }
 
@@ -90,22 +104,47 @@
 
   &--powder::after {
     content: "2";
+    right: 79px;
+
+    @media (min-width: $desktop-width) {
+      right: 0;
+    }
   }
 
   &--dining::before {
+    top: -1px;
     background-image: url("../img/advantage-dining@1x.png");
+
+    @media (min-width: $desktop-width) {
+      top: 0;
+    }
   }
 
   &--dining::after {
     content: "3";
+    right: 78px;
+
+    @media (min-width: $desktop-width) {
+      right: -2px;
+    }
   }
 
   &--clock::before {
+    top: -1px;
     background-image: url("../img/advantage-clock@1x.png");
+
+    @media (min-width: $desktop-width) {
+      top: 0;
+    }
   }
 
   &--clock::after {
     content: "4";
+    right: 76px;
+
+    @media (min-width: $desktop-width) {
+      right: -3px;
+    }
   }
 }
 
@@ -115,9 +154,13 @@
 
   @media (min-width: $tablet-width) {
     width: 245px;
-    padding-top: 110px;
+    padding-top: 111px;
     font-size: 16px;
     line-height: 24px;
     z-index: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 112px;
   }
 }
