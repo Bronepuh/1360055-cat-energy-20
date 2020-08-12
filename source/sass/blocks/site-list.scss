@@ -16,6 +16,16 @@
     display: flex;
     justify-content: flex-end;
   }
+
+  &--desktop-index {
+    @media (min-width: $desktop-width) {
+      color: $basic-white;
+
+      .site-list__link--active::after {
+        background-color: $basic-white;
+      }
+    }
+  }
 }
 
 .site-list__item {
@@ -26,7 +36,7 @@
   width: 100%;
   padding-top: 23px;
   padding-bottom: 23px;
-  font-family: $oswald;
+  font-family: $primary-font;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;

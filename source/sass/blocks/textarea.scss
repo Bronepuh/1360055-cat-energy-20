@@ -8,11 +8,12 @@
   display: block;
   min-width: 280px;
   min-height: 151px;
+  flex-grow: 1;
   padding-top: 14px;
   padding-left: 15px;
   padding-bottom: 16px;
   margin-bottom: 7px;
-  font-family: $oswald;
+  font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

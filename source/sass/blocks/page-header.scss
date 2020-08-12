@@ -3,8 +3,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding-top: 11px;
-  background-color: $basic-white;
+  background-color: transparent;
   border-bottom: 1px solid $basic-grey-2;
 
   @media (min-width: $tablet-width) {
@@ -17,17 +18,21 @@
   }
 }
 
-.page-header__bg-desktop {
+.page-header--desktop {
   @media (min-width: $desktop-width) {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 694px;
-    background-image: url("../../img/index-background-desktop@1x.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 694px;
+      background-color: transparent;
+      background-image: url("../../img/index-background-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+    }
   }
 }
 

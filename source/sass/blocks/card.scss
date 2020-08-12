@@ -33,16 +33,11 @@
 }
 
 .card__img-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.card__window {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-end;
   overflow: hidden;
   width: 50%;
   min-height: 120px;
@@ -55,87 +50,10 @@
 
 .card__img {
   display: block;
-  position: absolute;
   width: 140px;
   height: auto;
   background: transparent;
-
-  @media (min-width: $tablet-width) {
-    width: auto;
-    height: auto;
-  }
-
-  &--chicken-small {
-    top: -1px;
-
-    @media (min-width: $desktop-width) {
-      top: 27px;
-    }
-  }
-
-  &--chicken-big {
-    top: 4px;
-
-    @media (min-width: $tablet-width) {
-      top: -1px;
-    }
-
-    @media (min-width: $desktop-width) {
-      top: -1px;
-    }
-  }
-
-  &--fish-small {
-    top: 18px;
-
-    @media (min-width: $tablet-width) {
-      top: -1px;
-    }
-
-    @media (min-width: $desktop-width) {
-      top: -1px;
-    }
-  }
-
-  &--fish-big {
-    top: 4px;
-
-    @media (min-width: $tablet-width) {
-      top: -1px;
-    }
-  }
-
-  &--buckwheat-small {
-    top: 18px;
-
-    @media (min-width: $tablet-width) {
-      top: 28px;
-    }
-  }
-
-  &--buckwheat-big {
-    top: 5px;
-
-    @media (min-width: $tablet-width) {
-      top: 0;
-    }
-
-    @media (min-width: $desktop-width) {
-      top: -1px;
-    }
-  }
-
-  &--rice-small {
-    top: 18px;
-
-    @media (min-width: $tablet-width) {
-      top: 27px;
-    }
-
-    @media (min-width: $desktop-width) {
-      top: 25px;
-    }
-  }
+  outline: 1px dashed green;
 }
 
 .card__description {
@@ -165,7 +83,7 @@
   width: 70%;
   margin: 0;
   margin-bottom: 14px;
-  font-family: $oswald;
+  font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
