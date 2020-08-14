@@ -6,12 +6,13 @@
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    padding-top: 41px;
+    padding-top: 15px;
     margin-bottom: 76px;
   }
 
   @media (min-width: $desktop-width) {
     justify-content: space-between;
+    margin-top: 55px;
     margin-bottom: 86px;
   }
 }
@@ -25,7 +26,7 @@
   margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 68px;
+    margin-bottom: 70px;
     padding-top: 47px;
   }
 
@@ -55,20 +56,20 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   width: 100%;
   padding-top: 15px;
   padding-bottom: 16px;
   border-bottom: 1px solid $special-grey;
 
   @media (min-width: $tablet-width) {
-    align-items: center;
+    min-height: 139px;
     border: 1px solid $special-grey;
     font-size: 16px;
     line-height: 20px;
     padding-left: 37px;
     padding-right: 37px;
-    padding-top: 26px;
+    padding-top: 29px;
     padding-bottom: 27px;
     border-bottom: none;
 
@@ -78,8 +79,10 @@
   }
 
   @media (min-width: $desktop-width) {
+    align-items: center;
+    min-height: auto;
     padding-top: 15px;
-    padding-bottom: 16px;
+    padding-bottom: 18px;
     padding-left: 0;
     padding-right: 0;
     border-left: none;
@@ -92,7 +95,7 @@
   align-items: center;
   width: 100%;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
@@ -109,18 +112,20 @@
 
   @media (min-width: $desktop-width) {
     width: 36.2%;
+    margin-bottom: 0;
   }
 }
 
 .additional-goods__quantity {
   display: flex;
-  justify-content: flex-end;
   width: 80%;
   margin-top: 0;
 
   @media (min-width: $tablet-width) {
     width: 50%;
-    text-align: end;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end;
   }
 
   @media (min-width: $desktop-width) {
@@ -145,20 +150,20 @@
 }
 
 .additional-goods__button {
+  display: flex;
+  align-items: center;
+  min-height: 38px;
   margin-top: 13px;
-  padding-top: 20px;
-  padding-bottom: 20px;
   font-size: 16px;
   line-height: 0px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 16px;
-    padding-bottom: 20px;
+    margin-top: 0;
+    align-self: flex-end;
   }
 
   @media (min-width: $desktop-width) {
     width: 244px;
-    margin-top: 0;
   }
 }
 

@@ -14,6 +14,10 @@
 .catalog__title {
   padding-bottom: 39px;
 
+  @media (min-width: $tablet-width) {
+    padding-bottom: 90px;
+  }
+
   @media (min-width: $desktop-width) {
     padding-top: 6px;
     padding-bottom: 40px;
@@ -29,7 +33,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
-    row-gap: 15px;
+    row-gap: 43px;
   }
 
   @media (min-width: $desktop-width) {
@@ -43,7 +47,6 @@
 .catalog__item {
   width: 100%;
   display: flex;
-  margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;

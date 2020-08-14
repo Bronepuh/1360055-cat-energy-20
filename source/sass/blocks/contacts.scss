@@ -24,10 +24,18 @@
     padding-left: 75px;
     padding-right: 90px;
     background-color: $basic-white;
+
+    &.container {
+      min-width: 0;
+    }
   }
 
   &--grey {
     background-color: $basic-grey;
+
+    @media (min-width: $desktop-width) {
+      background-color: $basic-white;
+    }
   }
 }
 
@@ -56,6 +64,7 @@
   @media (min-width: $desktop-width) {
     width: 40%;
     padding-left: 0;
+    padding-right: 0;
   }
 }
 
