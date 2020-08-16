@@ -264,7 +264,7 @@
 .example__picture-1 {
   width: 100%;
   height: 320px;
-  background-image: url("../../img/before-mobile@1x.png");
+  background-image: url("../img/before-mobile@1x.png");
   background-repeat: no-repeat;
   background-size: unset;
   background-position-x: 50%;
@@ -272,13 +272,13 @@
   @media (min-width: $tablet-width) {
     width: 100%;
     height: 620px;
-    background-image: url("../../img/before-tablet@1x.png");
+    background-image: url("../img/before-tablet@1x.png");
     background-position-x: 16px;
     background-position-y: 7px;
   }
 
   @media (min-width: $desktop-width) {
-    background-image: url("../../img/before-desktop@1x.png");
+    background-image: url("../img/before-desktop@1x.png");
     background-position-x: -20px;
     background-position-y: 12px;
   }
@@ -291,7 +291,7 @@
     display: flex;
     width: 100%;
     height: 620px;
-    background-image: url("../../img/after-tablet@1x.png");
+    background-image: url("../img/after-tablet@1x.png");
     background-repeat: no-repeat;
     background-size: unset;
     background-position-x: calc(100% - 2px);
@@ -299,7 +299,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-image: url("../../img/after-desktop@1x.png");
+    background-image: url("../img/after-desktop@1x.png");
     background-position-x: calc(100% - 20px);
     background-position-y: 10px;
   }

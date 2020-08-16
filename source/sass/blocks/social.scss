@@ -1,15 +1,14 @@
 .social__list {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 130px;
   margin: 0;
   padding: 0;
-  padding-top: 20px;
+  padding-top: 22px;
   padding-bottom: 20px;
   list-style: none;
-  border-top: 1px solid $basic-grey-2;
-  border-bottom: 1px solid $basic-grey-2;
 
   @media (min-width: $tablet-width) {
     border: none;
