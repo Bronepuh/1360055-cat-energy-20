@@ -68,24 +68,25 @@
   }
 }
 
+// исправить
 .line {
   position: absolute;
   content: "";
   top: 15px;
   right: -40px;
-  width: calc(100% + 40px);
+  width: calc(100% + 20px);
   height: 2px;
   background-color: $basic-green;
 
   @media (min-width: $tablet-width) {
     top: 22px;
     right: -70px;
-    width: calc(100% + 140px);
+    width: calc(100% + 120px);
   }
 
   @media (min-width: $desktop-width) {
     top: 30px;
     right: -110px;
-    width: calc(100% + 220px);
+    width: calc(100% + 200px);
   }
 }
