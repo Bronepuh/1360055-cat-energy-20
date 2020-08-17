@@ -15,15 +15,16 @@
   width: 100%;
   flex-grow: 1;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 53px;
   padding: 0;
+  padding-top: 13px;
   list-style: none;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 76px;
     border: 1px solid $darck-grey-2;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 28px;
+    padding-bottom: 28px;
   }
 
   @media (min-width: $desktop-width) {

@@ -1,4 +1,5 @@
 .pagination {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -23,7 +24,7 @@
 
   @media (min-width: $tablet-width) {
     width: 60%;
-    padding-top: 290px;
+    padding-top: 235px;
     font-size: 20px;
     line-height: 22px;
     text-align: center;
@@ -50,10 +51,12 @@
       width: 60px;
       height: 60px;
       top: 63%;
+      transform: translate(-50%, -108%);
     }
 
     @media (min-width: $desktop-width) {
       top: 64%;
+      transform: translate(-50%, -80%);
     }
   }
 }
