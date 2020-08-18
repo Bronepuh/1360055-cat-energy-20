@@ -8,7 +8,7 @@
   background-color: $basic-grey-5;
 
   @media (min-width: $tablet-width) {
-    background-image: linear-gradient($basic-white 55%, $basic-grey-5 45%);
+    background-image: linear-gradient($basic-white 57.3%, $basic-grey-5 57.3%);
     padding-top: 0;
     padding-bottom: 18px;
   }
@@ -31,7 +31,7 @@
   @media (min-width: $desktop-width) {
     width: 40%;
     padding-top: 65px;
-    padding-bottom: 58px;
+    padding-bottom: 47px;
   }
 }
 
@@ -42,16 +42,6 @@
   @media (min-width: $tablet-width) {
     padding-top: 43px;
     padding-bottom: 48px;
-
-    &::before {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: -40px;
-      width: calc(100% + 80px);
-      height: 1px;
-      background-color: $basic-grey-2;
-    }
   }
 
   @media (min-width: $desktop-width) {
@@ -216,6 +206,7 @@
     flex-wrap: wrap;
     width: 100%;
     margin: 0;
+    margin-bottom: 10px;
     padding: 0;
     font-size: 20px;
     line-height: 20px;
@@ -259,6 +250,10 @@
     display: flex;
     width: 354px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 345px;
+  }
 }
 
 .example__picture-1 {
@@ -269,18 +264,33 @@
   background-size: unset;
   background-position-x: 50%;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/before-mobile@2x.png");
+    background-size: contain;
+  }
+
   @media (min-width: $tablet-width) {
     width: 100%;
     height: 620px;
     background-image: url("../img/before-tablet@1x.png");
     background-position-x: 16px;
     background-position-y: 7px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/before-tablet@2x.png");
+      background-size: 200% auto;
+    }
   }
 
   @media (min-width: $desktop-width) {
     background-image: url("../img/before-desktop@1x.png");
     background-position-x: -20px;
     background-position-y: 12px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/before-desktop@2x.png");
+      background-size: 200% auto;
+    }
   }
 }
 
@@ -294,13 +304,24 @@
     background-image: url("../img/after-tablet@1x.png");
     background-repeat: no-repeat;
     background-size: unset;
-    background-position-x: calc(100% - 2px);
+    background-position-x: 100%;
     background-position-y: 7px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/after-tablet@2x.png");
+      background-size: 200% auto;
+    }
   }
 
   @media (min-width: $desktop-width) {
+    width: 517px;
     background-image: url("../img/after-desktop@1x.png");
-    background-position-x: calc(100% - 20px);
+    background-position-x: 106%;
     background-position-y: 10px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/after-desktop@2x.png");
+      background-size: 200% auto;
+    }
   }
 }

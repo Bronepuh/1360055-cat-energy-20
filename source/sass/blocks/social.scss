@@ -31,6 +31,15 @@
   align-items: center;
   color: $special-grey-2;
 
+  &:hover {
+    color: $basic-green;
+  }
+
+  &:active {
+    color: $basic-green;
+    opacity: 0.3;
+  }
+
   &--vk {
     width: 23px;
     height: 16px;

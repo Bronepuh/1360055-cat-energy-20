@@ -233,6 +233,10 @@
   text-decoration: none;
   color: $basic-black;
 
+  &:active {
+    opacity: 0.3;
+  }
+
   &::after {
     position: absolute;
     content: "";

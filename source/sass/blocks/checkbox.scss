@@ -25,7 +25,10 @@
 }
 
 .checkbox__button:checked + label::before {
-  background-color: yellow;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-size: 19px 19px;
+  background-position: 50%;
 }
 
 .checkbox__item {
@@ -63,6 +66,10 @@
   text-transform: uppercase;
   color: $text-color-2;
 
+  &:active {
+    color: rgba($color: $text-color-2, $alpha: 0.3);
+  }
+
   @media (min-width: $tablet-width) {
     padding-left: 60px;
     font-size: 20px;
@@ -74,7 +81,8 @@
     content: "";
     width: 30px;
     height: 30px;
-    background-color: yellowgreen;
+    background-color: $basic-white;
+    border: 1px solid $special-grey;
     top: 50%;
     left: 0;
     transform: translateY(-47%);
@@ -84,5 +92,13 @@
       width: 40px;
       height: 40px;
     }
+  }
+
+  &:hover::before {
+    border: 1px solid $special-grey-4;
+  }
+
+  &:active::before {
+    border: 1px solid rgba($color:$special-grey-4, $alpha: 0.3);
   }
 }

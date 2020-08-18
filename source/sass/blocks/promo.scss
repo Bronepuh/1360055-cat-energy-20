@@ -9,6 +9,11 @@
   background-size: unset;
   background-position-x: center;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg"), linear-gradient($basic-green-2 306px, white 306px);
+    background-size: auto 306px;
+  }
+
   @media (min-width: $tablet-width) {
     background-image: none;
     color: $basic-black;
@@ -17,7 +22,7 @@
   @media (min-width: $desktop-width) {
     justify-content: start;
     z-index: 1;
-    background: transparent;
+    background: none;
     margin-bottom: 136px;
   }
 }
