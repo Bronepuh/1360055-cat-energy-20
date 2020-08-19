@@ -167,6 +167,9 @@
   line-height: 0px;
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-left: 38px;
-  margin-right: 38px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 38px;
+    margin-right: 38px;
+  }
 }

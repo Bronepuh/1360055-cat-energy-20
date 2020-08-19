@@ -40,9 +40,9 @@
         <h3 class="promo__subtitle">Занялся собой? Займись котом!</h3>
       </div>
       <picture>
-        <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png">
-        <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg">
-        <img class="promo__picture" src="img/index-can-mobile@1x.png" width="280" height="270" alt="промо">
+        <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png, img/index-can-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg, img/index-can-tablet@2x.jpg 2x">
+        <img class="promo__picture" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="промо">
       </picture>
       <button class="promo__button button" type="button">подобрать программу</button>
     </section>
@@ -68,19 +68,23 @@
       <h2 class="principle__title title">Как это работает</h2>
       <ul class="principle__list">
         <li class="principle__item">
-          <img class="principle__picture" src="img/advantage-leaf@1x.png" srcset="img/advantage-leaf@2x.png 2x" width="50" height="50" alt="листик">
+          <img class="principle__picture" src="img/advantage-leaf@1x.png" srcset="img/advantage-leaf@2x.png 2x"
+            width="50" height="50" alt="листик">
           <p class="principle__description">Функциональное питание содержит только полезные питательные вещества.</p>
         </li>
         <li class="principle__item principle__item--powder">
-          <img class="principle__picture principle__picture--powder" src="img/advantage-powder@1x.png" srcset="img/advantage-powder@2x.png 2x" width="50" height="50" alt="кипяток">
+          <img class="principle__picture principle__picture--powder" src="img/advantage-powder@1x.png"
+            srcset="img/advantage-powder@2x.png 2x" width="50" height="50" alt="кипяток">
           <p class="principle__description">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
         </li>
         <li class="principle__item principle__item--dining">
-          <img class="principle__picture principle__picture--dining" src="img/advantage-dining@1x.png" srcset="img/advantage-dining@2x.png 2x" width="50" height="50" alt="ложка с вилкой">
+          <img class="principle__picture principle__picture--dining" src="img/advantage-dining@1x.png"
+            srcset="img/advantage-dining@2x.png 2x" width="50" height="50" alt="ложка с вилкой">
           <p class="principle__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
         </li>
         <li class="principle__item principle__item--clock">
-          <img class="principle__picture principle__picture--clock" src="img/advantage-clock@1x.png" srcset="img/advantage-clock@2x.png 2x" width="50" height="50" alt="будильник">
+          <img class="principle__picture principle__picture--clock" src="img/advantage-clock@1x.png"
+            srcset="img/advantage-clock@2x.png 2x" width="50" height="50" alt="будильник">
           <p class="principle__description">Уже через месяц наслаждайтесь изменениями к лучшему <span>вашего
               питомца!</span></p>
         </li>
@@ -91,7 +95,8 @@
         <h2 class="example__title title">Живой пример</h2>
         <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
           Slim.
-          Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов
+          Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
+          часов
           в день.</p>
         <ul class="example__list">
           <li class="example__item">
@@ -109,13 +114,22 @@
         </div>
       </div>
       <div class="example__inner-2">
-        <div class="example__image">
-          <div class="example__picture-1"></div>
+        <div class="example__image-1">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+            <img class="example__picture-1" src="img/before-mobile@1x.png" alt="толстый кот">
+          </picture>
         </div>
 
-        <div class="example__image">
-          <div class="example__picture-2"></div>
+        <div class="example__image-2">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png">
+            <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+            <img class="example__picture-2" src="img/after-mobile@1x.png" alt="толстый кот">
+          </picture>
         </div>
+
         <div class="example__range range">
           <div class="range__controlls">
             <div class="range__button-wrapper">
