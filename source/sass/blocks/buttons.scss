@@ -54,6 +54,8 @@
     line-height: 20px;
     background-color: inherit;
     color: $basic-black;
+    cursor: pointer;
+    z-index: 1;
 
     @media (min-width: $tablet-width) {
       font-size: 20px;
@@ -67,6 +69,35 @@
         width: 100%;
         height: 1px;
         border-bottom: 1px dotted $special-grey;
+      }
+    }
+
+    &:hover {
+      background-color: inherit;
+
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: 4px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        border-bottom: 1px solid $special-grey;
+      }
+    }
+
+    &:active {
+      color: $basic-black;
+      background-color: inherit;
+
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: 4px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        border-bottom: none;
       }
     }
   }
