@@ -14,7 +14,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 52px;
+    padding-top: 54px;
   }
 }
 
@@ -28,10 +28,14 @@
       width: 50%;
       height: 694px;
       background-color: transparent;
-      background-image: url("../../img/index-background-desktop@1x.jpg");
+      background-image: url("../img/index-background-desktop@1x.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
     }
   }
 }
@@ -39,10 +43,11 @@
 .page-header__toggle {
   width: 24px;
   height: 16px;
+  margin-top: -10px;
   background-color: inherit;
   background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 16px;
   border: none;
   outline: none;
   cursor: pointer;

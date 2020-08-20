@@ -116,24 +116,26 @@
     }
   }
 
-  &--clock::after {
-    content: "4";
-    right: 76px;
+  &--clock {
+    &::after {
+      content: "4";
+      right: 76px;
 
-    @media (min-width: $desktop-width) {
-      right: -3px;
+      @media (min-width: $desktop-width) {
+        right: -3px;
+      }
     }
   }
 }
 
 .principle__picture {
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 5px;
+  left: 5px;
 
   @media (min-width: $tablet-width) {
-    top: 25px;
-    left: 25px;
+    top: 15px;
+    left: 15px;
   }
 }
 

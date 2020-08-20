@@ -3,6 +3,14 @@
   height: auto;
   padding-bottom: 11px;
 
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
   @media (min-width: $tablet-width) {
     width: 174px;
   }

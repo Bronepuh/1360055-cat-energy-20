@@ -16,9 +16,27 @@
   outline: none;
   cursor: pointer;
 
+  &:hover {
+    background-color: $basic-green-2;
+  }
+
+  &:active {
+    background-color: $basic-green-2;
+    color: rgba($color: $basic-white, $alpha: 0.3);
+  }
+
   &--secondary {
     background-color: $basic-grey;
     color: $text-color;
+
+    &:hover {
+      background-color: $basic-grey-4;
+    }
+
+    &:active {
+      background-color: $basic-grey-4;
+      color: rgba($color: $text-color, $alpha: 0.3);
+    }
 
     @media (min-width: $tablet-width) {
       padding: 0;

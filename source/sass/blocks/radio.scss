@@ -35,7 +35,9 @@
 }
 
 .radio__button:checked + label::before {
-  background-color: yellow;
+  border: 8px solid $basic-white;
+  background-color: $basic-green;
+  box-shadow: 0 0 0 1px $special-grey;
 }
 
 .radio__item {
@@ -72,12 +74,23 @@
   text-transform: uppercase;
   color: $text-color-2;
 
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 89px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &::before {
     position: absolute;
     content: "";
     width: 30px;
     height: 30px;
-    background-color: yellowgreen;
+    background-color: $basic-white;
+    border: 1px solid $special-grey;
     border-radius: 50%;
     top: 50%;
     left: 0;
@@ -88,11 +101,5 @@
       height: 40px;
       left: 29px;
     }
-  }
-
-  @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 30px;
-    padding-left: 89px;
   }
 }

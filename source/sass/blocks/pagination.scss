@@ -4,6 +4,12 @@
   flex-wrap: wrap;
   justify-content: center;
   background: transparent;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 35px;
+    padding-left: 38px;
+    padding-right: 38px;
+  }
 }
 
 .pagination__title {
@@ -24,7 +30,7 @@
 
   @media (min-width: $tablet-width) {
     width: 60%;
-    padding-top: 235px;
+    padding-top: 238px;
     font-size: 20px;
     line-height: 22px;
     text-align: center;

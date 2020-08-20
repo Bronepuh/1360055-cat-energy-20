@@ -51,6 +51,7 @@
 }
 
 .inputs__item {
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
@@ -121,6 +122,18 @@
   &--email {
     flex-grow: 1;
     margin-left: 10px;
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-size: 18px auto;
+    background-position-x: calc(100% - 13px);
+    background-position-y: 50%;
+
+    &:focus {
+      background-image: url("../img/icon-mail-green.svg");
+      background-repeat: no-repeat;
+      background-size: 18px auto;
+      background-position-x: calc(100% - 13px);
+    }
 
     @media (min-width: $tablet-width) {
       margin-left: 20px;
@@ -131,6 +144,18 @@
   &--tel {
     flex-grow: 1;
     margin-left: 10px;
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-size: 20px auto;
+    background-position-x: calc(100% - 11px);
+    background-position-y: 50%;
+
+    &:focus {
+      background-image: url("../img/icon-phone-green.svg");
+      background-repeat: no-repeat;
+      background-size: 20px auto;
+      background-position-x: calc(100% - 11px);
+    }
 
     @media (min-width: $tablet-width) {
       margin-left: 15px;
