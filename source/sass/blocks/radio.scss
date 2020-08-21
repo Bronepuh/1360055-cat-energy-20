@@ -38,6 +38,10 @@
   border: 8px solid $basic-white;
   background-color: $basic-green;
   box-shadow: 0 0 0 1px $special-grey;
+
+  @media (min-width: $tablet-width) {
+    border: 11px solid $basic-white;
+  }
 }
 
 .radio__item {
@@ -99,7 +103,7 @@
     @media (min-width: $tablet-width) {
       width: 40px;
       height: 40px;
-      left: 29px;
+      left: 28px;
     }
   }
 }

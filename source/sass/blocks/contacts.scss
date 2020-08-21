@@ -1,6 +1,14 @@
 .contacts {
   position: relative;
-  width: 100%;
+  width: 100vw;
+
+  &--grey {
+    background-color: $basic-grey;
+
+    @media (min-width: $desktop-width) {
+      background-color: $basic-white;
+    }
+  }
 }
 
 .contacts__info {
@@ -27,14 +35,6 @@
 
     &.container {
       min-width: 0;
-    }
-  }
-
-  &--grey {
-    background-color: $basic-grey;
-
-    @media (min-width: $desktop-width) {
-      background-color: $basic-white;
     }
   }
 }

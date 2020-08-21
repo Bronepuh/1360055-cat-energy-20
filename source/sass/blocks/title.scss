@@ -19,7 +19,58 @@
   }
 
   &--contacts {
-    padding-bottom: 30px;
+    width: 100%;
+    padding-bottom: 32px;
+
+    @media (min-width: $desktop-width) {
+      padding-bottom: 33px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 15px;
+      right: -20px;
+      width: 100%;
+      height: 2px;
+      background-color: $basic-green;
+
+      @media (min-width: $tablet-width) {
+        top: 22px;
+        right: -70px;
+        width: calc(100% + 140px);
+      }
+
+      @media (min-width: $desktop-width) {
+        top: 29px;
+        right: -110px;
+        width: calc(100% + 220px);
+      }
+    }
+  }
+
+  &--line {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 15px;
+      right: -20px;
+      width: 100%;
+      height: 2px;
+      background-color: $basic-green;
+
+      @media (min-width: $tablet-width) {
+        top: 22px;
+        right: -30px;
+        width: calc(100% + 60px);
+      }
+
+      @media (min-width: $desktop-width) {
+        top: 29px;
+        right: -110px;
+        width: calc(100% + 220px);
+      }
+    }
   }
 }
 
@@ -57,12 +108,14 @@
   &--first {
     @media (min-width: $tablet-width) {
       margin-left: -39px;
+      padding-top: 9px;
       padding-right: 0;
     }
   }
 
   &--second {
     @media (min-width: $tablet-width) {
+      padding-top: 9px;
       padding-left: 9px;
       padding-right: 43px;
       margin-left: 0;
