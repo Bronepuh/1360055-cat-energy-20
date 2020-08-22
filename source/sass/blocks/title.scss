@@ -18,65 +18,26 @@
     line-height: 60px;
   }
 
-  &--contacts {
-    width: 100%;
-    padding-bottom: 32px;
-
-    @media (min-width: $desktop-width) {
-      padding-bottom: 33px;
-    }
-
-    &::before {
-      position: absolute;
-      content: "";
-      top: 15px;
-      right: -20px;
-      width: 100%;
-      height: 2px;
-      background-color: $basic-green;
-
-      @media (min-width: $tablet-width) {
-        top: 22px;
-        right: -70px;
-        width: calc(100% + 140px);
-      }
-
-      @media (min-width: $desktop-width) {
-        top: 29px;
-        right: -110px;
-        width: calc(100% + 220px);
-      }
-    }
-  }
-
   &--line {
     &::before {
       position: absolute;
       content: "";
       top: 15px;
-      right: -20px;
-      width: 100%;
+      left: -50%;
+      width: 200%;
       height: 2px;
       background-color: $basic-green;
+      z-index: 0;
 
       @media (min-width: $tablet-width) {
         top: 22px;
-        right: -30px;
-        width: calc(100% + 60px);
       }
 
       @media (min-width: $desktop-width) {
         top: 29px;
-        right: -110px;
-        width: calc(100% + 220px);
       }
     }
   }
-}
-
-.title__name-wrapper {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .title__name {
@@ -84,6 +45,8 @@
   margin: 0;
   padding: 0;
   padding-right: 20px;
+  padding-left: 20px;
+  margin-left: -20px;
   font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
@@ -96,35 +59,10 @@
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    padding-left: 38px;
-    padding-right: 40px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 7px;
     margin-left: -37px;
-  }
-
-  &--first {
-    @media (min-width: $tablet-width) {
-      margin-left: -39px;
-      padding-top: 9px;
-      padding-right: 0;
-    }
-  }
-
-  &--second {
-    @media (min-width: $tablet-width) {
-      padding-top: 9px;
-      padding-left: 9px;
-      padding-right: 43px;
-      margin-left: 0;
-    }
-  }
-
-  &--third {
-    @media (min-width: $tablet-width) {
-      margin-left: -40px;
-    }
   }
 }

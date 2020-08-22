@@ -3,7 +3,7 @@
   flex-wrap: wrap;
 }
 
-.header__wrapper {
+.page-header__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -60,8 +60,10 @@
   width: 277px;
   margin: 0 auto;
 
+
   @media (min-width: $tablet-width) {
     width: 175px;
+    margin: 0;
   }
 
   @media (min-width: $desktop-width) {

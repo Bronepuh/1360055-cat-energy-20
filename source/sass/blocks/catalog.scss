@@ -57,8 +57,8 @@
     position: absolute;
     content: "";
     top: 0;
-    left: 0;
-    width: 100%;
+    left: -20px;
+    width: calc(100% + 40px);
     height: 1px;
     background-color: $basic-grey-4;
     z-index: 1;
@@ -72,8 +72,8 @@
     position: absolute;
     content: "";
     bottom: -25px;
-    left: 0;
-    width: 100%;
+    left: -20px;
+    width: calc(100% + 40px);
     height: 1px;
     background-color: $basic-grey-4;
 
