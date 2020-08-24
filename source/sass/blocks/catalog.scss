@@ -57,10 +57,11 @@
     position: absolute;
     content: "";
     top: 0;
-    left: -20px;
-    width: calc(100% + 40px);
+    left: 50%;
+    width: 100vw;
     height: 1px;
     background-color: $basic-grey-4;
+    transform: translateX(-50%);
     z-index: 1;
 
     @media (min-width: $tablet-width) {
@@ -72,10 +73,11 @@
     position: absolute;
     content: "";
     bottom: -25px;
-    left: -20px;
-    width: calc(100% + 40px);
+    left: 50%;
+    width: 100vw;
     height: 1px;
     background-color: $basic-grey-4;
+    transform: translateX(-50%);
 
     @media (min-width: $tablet-width) {
       display: none;
