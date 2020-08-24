@@ -23,10 +23,11 @@
       position: absolute;
       content: "";
       top: 15px;
-      left: -50%;
-      width: 200%;
+      left: 50%;
+      width: 100vw;
       height: 2px;
       background-color: $basic-green;
+      transform: translateX(-50%);
       z-index: 0;
 
       @media (min-width: $tablet-width) {
