@@ -54,18 +54,6 @@
     padding-left: 110px;
     padding-right: 110px;
   }
-
-  &--form {
-    @media (min-width: $tablet-width) {
-      padding-left: 40px;
-      padding-right: 40px;
-    }
-
-    @media (min-width: $desktop-width) {
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
 }
 
 .br {

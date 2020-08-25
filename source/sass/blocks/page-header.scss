@@ -53,24 +53,6 @@
   }
 }
 
-.page-header__logo {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 277px;
-  margin: 0 auto;
-
-
-  @media (min-width: $tablet-width) {
-    width: 175px;
-    margin: 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 202px;
-  }
-}
-
 .page-header__toggle {
   width: 24px;
   height: 16px;
