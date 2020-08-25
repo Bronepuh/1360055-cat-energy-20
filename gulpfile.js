@@ -22,6 +22,7 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(csso())
+    .pipe(rename("style-min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
@@ -29,79 +30,18 @@ const styles = () => {
 
 exports.styles = styles;
 
-//CSS
-
-const css = () => {
-  return gulp.src("source/sass/style.scss")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(csso())
-    .pipe(rename("style-min.css"))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
-    .pipe(sync.stream());
-}
-
-exports.css = css;
-
 //Sprite
 
 const sprite = () => {
   return gulp.src("source/img/**/icon-*.svg")
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("source/img"))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.sprite = sprite;
 
-//Html
-
-const html = () => {
-  return gulp.src("source/*.html")
-    .pipe(gulp.dest("build"))
-}
-
-exports.html = html;
-
-//Webp
-
-gulp.task('webp', () =>
-  gulp.src("source/img/**/*.{jpg,gpeg,png}")
-    .pipe(webp({ quality: 90 }))
-    .pipe(gulp.dest("source/img"))
-);
-
-//Copy
-
-const copy = () => {
-  return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
-    "source/js/**",
-    "source/*.ico"
-  ], {
-    base: "source"
-  })
-    .pipe(gulp.dest("build"))
-
-}
-
-exports.copy = copy;
-
-//Clean
-
-const clean = () => {
-  return del("build");
-}
-
-exports.clean = clean;
-
-// Server
+// Server - source
 
 const server = (done) => {
   sync.init({
@@ -124,20 +64,95 @@ const watcher = () => {
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
+//Start
+
+exports.default = gulp.series(
+  styles,
+  sprite,
+  server,
+  watcher
+);
+
+//Clean
+
+const clean = () => {
+  return del("build");
+}
+
+exports.clean = clean;
+
+//Copy
+
+const copy = () => {
+  return gulp.src([
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**",
+    "source/js/**",
+    "source/*.ico",
+    "source/*.html",
+    "source/css/normalize.css",
+  ], {
+    base: "source"
+  })
+    .pipe(gulp.dest("build"))
+
+}
+
+exports.copy = copy;
+
+//CSS
+
+const css = () => {
+  return gulp.src("source/sass/style.scss")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(csso())
+    .pipe(rename("style-min.css"))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+    .pipe(sync.stream());
+}
+
+exports.css = css;
+
+//Webp
+
+gulp.task('webp', () =>
+  gulp.src("source/img/**/*.{jpg,gpeg,png}")
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest("source/img"))
+);
+
 //Build
 
 exports.build = gulp.series(
   clean,
   copy,
-  css,
-  sprite,
-  html
+  css
 );
 
-//Start
+// Server - build
 
-exports.default = gulp.series(
-  styles,
-  server,
-  watcher
+const server1 = (done) => {
+  sync.init({
+    server: {
+      baseDir: 'build'
+    },
+    cors: true,
+    notify: false,
+    ui: false,
+  });
+  done();
+}
+
+exports.server1 = server1;
+
+// Sratr Prodaction
+
+exports.pro = gulp.series(
+  server1
 );
