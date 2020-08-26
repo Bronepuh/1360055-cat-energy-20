@@ -39,39 +39,39 @@
     color: $basic-green;
     opacity: 0.3;
   }
+}
 
-  &--vk {
-    width: 23px;
-    height: 16px;
+.social__vk {
+  width: 23px;
+  height: 16px;
 
-    @media (min-width: $tablet-width) {
-      width: 30px;
-      height: 22px;
-      margin-top: -2px;
-      margin-left: -6px;
-    }
-  }
-
-  &--insta {
-    width: 16px;
-    height: 16px;
-
-    @media (min-width: $tablet-width) {
-      width: 23px;
-      height: 33px;
-      margin-left: -3px;
-    }
-  }
-
-  &--fb {
-    width: 22px;
+  @media (min-width: $tablet-width) {
+    width: 30px;
     height: 22px;
+    margin-top: -2px;
+    margin-left: -6px;
+  }
+}
 
-    @media (min-width: $tablet-width) {
-      width: 28px;
-      height: 33px;
-      margin-top: 3px;
-      margin-left: -15px;
-    }
+.social__insta {
+  width: 16px;
+  height: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 23px;
+    height: 33px;
+    margin-left: -3px;
+  }
+}
+
+.social__fb {
+  width: 22px;
+  height: 22px;
+
+  @media (min-width: $tablet-width) {
+    width: 28px;
+    height: 33px;
+    margin-top: 3px;
+    margin-left: -15px;
   }
 }

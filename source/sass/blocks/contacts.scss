@@ -2,11 +2,16 @@
   position: relative;
   width: 100%;
 
+  @media (min-width: $desktop-width) {
+    width: 100vw;
+    height: 400px;
+  }
+
   &--grey {
     background-color: $basic-grey;
 
     @media (min-width: $desktop-width) {
-      background-color: $basic-white;
+      background-color: transparent;
     }
   }
 }
@@ -24,17 +29,14 @@
   }
 
   @media (min-width: $desktop-width) {
-    position: absolute;
-    top: 95px;
-    left: 110px;
-    width: 570px;
+    width: 50%;
     height: 201px;
-    padding-left: 75px;
-    padding-right: 90px;
+    margin-top: 50px;
+    padding-left: 76px;
     background-color: $basic-white;
 
     &.container {
-      min-width: 0;
+      justify-content: flex-start;
     }
   }
 }
@@ -91,21 +93,21 @@
     padding-right: 0;
     padding-left: 48px;
   }
+}
 
-  &--street {
-    @media (min-width: $tablet-width) {
-      display: flex;
-      line-height: 0;
-      margin-bottom: 10px;
-    }
+.contacts__street {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    line-height: 0;
+    margin-bottom: 10px;
   }
+}
 
-  &--city {
-    @media (min-width: $tablet-width) {
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-    }
+.contacts__city {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
   }
 }
 
@@ -118,8 +120,20 @@
   @media (min-width: $tablet-width) {
     height: 400px;
   }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 400px;
+    z-index: -1;
+  }
 }
 
 .contacts__map iframe {
   border: 0;
+  width: 100%;
+  height: 100%;
 }
