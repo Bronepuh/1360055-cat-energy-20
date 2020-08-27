@@ -33,7 +33,7 @@ exports.styles = styles;
 //Sprite
 
 const sprite = () => {
-  return gulp.src("source/img/**/icon-*.svg")
+  return gulp.src(["source/img/**/icon-*.svg", "source/img/htmlacademy.svg"])
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("source/img"))
@@ -41,9 +41,9 @@ const sprite = () => {
 
 exports.sprite = sprite;
 
-// Server - source
+// Server-dev
 
-const server = (done) => {
+const server1 = (done) => {
   sync.init({
     server: {
       baseDir: 'source'
@@ -55,7 +55,7 @@ const server = (done) => {
   done();
 }
 
-exports.server = server;
+exports.server = server1;
 
 // Watcher
 
@@ -99,19 +99,44 @@ const image = () => {
 
 exports.image = image;
 
-//Start
+//Start-dev
 
-exports.default = gulp.series(
+exports.dev = gulp.series(
   styles,
-  sprite,
-  image,
-  server,
+  server1,
   watcher
 );
+
+// Promotion
 
 //Build
 
 exports.build = gulp.series(
   clean,
   copy
+);
+
+//Server-pro
+
+const server = (done) => {
+  sync.init({
+    server: {
+      baseDir: 'build'
+    },
+    cors: true,
+    notify: false,
+    ui: false,
+  });
+  done();
+}
+
+exports.server = server;
+
+//Start-build
+
+exports.default = gulp.series(
+  clean,
+  copy,
+  image,
+  server
 );
