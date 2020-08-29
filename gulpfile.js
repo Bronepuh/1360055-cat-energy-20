@@ -6,6 +6,7 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 const csso = require('gulp-csso');
+const htmlmin = require('gulp-htmlmin');
 const rename = require("gulp-rename");
 const webp = require('gulp-webp');
 const del = require('del');
@@ -24,11 +25,22 @@ const styles = () => {
     .pipe(csso())
     .pipe(rename("style-min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
+
+//Html
+
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"))
+    .pipe(sync.stream())
+}
+
+exports.html = html;
 
 //Sprite
 
@@ -40,22 +52,6 @@ const sprite = () => {
 }
 
 exports.sprite = sprite;
-
-// Server-dev
-
-const server1 = (done) => {
-  sync.init({
-    server: {
-      baseDir: 'source'
-    },
-    cors: true,
-    notify: false,
-    ui: false,
-  });
-  done();
-}
-
-exports.server = server1;
 
 // Watcher
 
@@ -90,6 +86,8 @@ const copy = () => {
 
 exports.copy = copy;
 
+//Webp
+
 const image = () => {
   return gulp.src("source/img/**/*.{jpg,jpeg,png}")
     .pipe(webp({ quality: 90 }))
@@ -99,24 +97,7 @@ const image = () => {
 
 exports.image = image;
 
-//Start-dev
-
-exports.dev = gulp.series(
-  styles,
-  server1,
-  watcher
-);
-
-// Promotion
-
-//Build
-
-exports.build = gulp.series(
-  clean,
-  copy
-);
-
-//Server-pro
+//Server
 
 const server = (done) => {
   sync.init({
@@ -127,16 +108,30 @@ const server = (done) => {
     notify: false,
     ui: false,
   });
+  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
   done();
 }
 
 exports.server = server;
 
-//Start-build
+//Build
+
+exports.build = gulp.series(
+  clean,
+  copy,
+  styles,
+  html,
+  image,
+);
+
+//Start
 
 exports.default = gulp.series(
   clean,
   copy,
+  styles,
+  html,
   image,
   server
 );
