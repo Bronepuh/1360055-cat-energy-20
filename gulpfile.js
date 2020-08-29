@@ -13,7 +13,6 @@ const del = require('del');
 const svgstore = require('gulp-svgstore');
 
 // Styles
-
 const styles = () => {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -32,7 +31,6 @@ const styles = () => {
 exports.styles = styles;
 
 //Html
-
 const html = () => {
   return gulp.src("source/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
@@ -42,8 +40,15 @@ const html = () => {
 
 exports.html = html;
 
-//Sprite
+//Js
+const js = () => {
+  return gulp.src("source/js/**.js")
+  .pipe(gulp.dest("build/js"))
+}
 
+exports.js = js;
+
+//Sprite
 const sprite = () => {
   return gulp.src(["source/img/**/icon-*.svg", "source/img/htmlacademy.svg"])
     .pipe(svgstore())
@@ -54,14 +59,12 @@ const sprite = () => {
 exports.sprite = sprite;
 
 // Watcher
-
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
 //Clean
-
 const clean = () => {
   return del("build");
 }
@@ -69,7 +72,6 @@ const clean = () => {
 exports.clean = clean;
 
 //Copy
-
 const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
@@ -87,7 +89,6 @@ const copy = () => {
 exports.copy = copy;
 
 //Webp
-
 const image = () => {
   return gulp.src("source/img/**/*.{jpg,jpeg,png}")
     .pipe(webp({ quality: 90 }))
@@ -98,7 +99,6 @@ const image = () => {
 exports.image = image;
 
 //Server
-
 const server = (done) => {
   sync.init({
     server: {
@@ -110,28 +110,29 @@ const server = (done) => {
   });
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
+  gulp.watch("source/js/**.js", gulp.series("js")).on("change", sync.reload);
   done();
 }
 
 exports.server = server;
 
 //Build
-
 exports.build = gulp.series(
   clean,
   copy,
   styles,
   html,
+  js,
   image,
 );
 
 //Start
-
 exports.default = gulp.series(
   clean,
   copy,
   styles,
   html,
+  js,
   image,
   server
 );
