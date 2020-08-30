@@ -178,6 +178,14 @@
 
   &--error {
     animation: shake 0.6s;
-    outline: 2px solid red;
+    outline: 2px solid $status-error;
+
+    &.inputs__field--email {
+      background-image: url("../img/icon-mail-error.svg");
+    }
+
+    &.inputs__field--tel {
+      background-image: url("../img/icon-phone-error.svg");
+    }
   }
 }

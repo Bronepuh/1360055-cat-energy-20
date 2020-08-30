@@ -31,6 +31,10 @@
   background-position: 50%;
 }
 
+.checkbox__button:focus + label::before {
+  outline: 1px solid $basic-black;
+}
+
 .checkbox__item {
   display: flex;
   flex-wrap: wrap;

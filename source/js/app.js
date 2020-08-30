@@ -27,39 +27,35 @@ headerMenuToggle.addEventListener("click", function () {
 
 if (document.contains(form)) {
   form.addEventListener("submit", function (evt) {
-    if (!inputName.value) {
-      evt.preventDefault()
+
+    let classRemove = () => {
       inputName.classList.remove("inputs__field--error")
       inputWeight.classList.remove("inputs__field--error")
       inputEmail.classList.remove("inputs__field--error")
       inputTel.classList.remove("inputs__field--error")
+    }
+
+    if (!inputName.value) {
+      evt.preventDefault()
+      classRemove()
       inputName.offsetWidth = inputName.offsetWidth
       inputName.classList.add("inputs__field--error")
       inputName.focus()
     } else if (!inputWeight.value) {
       evt.preventDefault()
-      inputName.classList.remove("inputs__field--error")
-      inputWeight.classList.remove("inputs__field--error")
-      inputEmail.classList.remove("inputs__field--error")
-      inputTel.classList.remove("inputs__field--error")
+      classRemove()
       inputWeight.offsetWidth = inputWeight.offsetWidth
       inputWeight.classList.add("inputs__field--error")
       inputWeight.focus()
     } else if (!inputEmail.value) {
       evt.preventDefault()
-      inputName.classList.remove("inputs__field--error")
-      inputWeight.classList.remove("inputs__field--error")
-      inputEmail.classList.remove("inputs__field--error")
-      inputTel.classList.remove("inputs__field--error")
+      classRemove()
       inputEmail.offsetWidth = inputEmail.offsetWidth
       inputEmail.classList.add("inputs__field--error")
       inputEmail.focus()
-    } else if (!inputEmail.value) {
+    } else if (!inputTel.value) {
       evt.preventDefault()
-      inputName.classList.remove("inputs__field--error")
-      inputWeight.classList.remove("inputs__field--error")
-      inputEmail.classList.remove("inputs__field--error")
-      inputTel.classList.remove("inputs__field--error")
+      classRemove()
       inputTel.offsetWidth = inputTel.offsetWidth
       inputTel.classList.add("inputs__field--error")
       inputTel.focus()
