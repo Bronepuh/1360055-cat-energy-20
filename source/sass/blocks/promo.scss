@@ -16,6 +16,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  min-height: 480px;
   justify-content: center;
   background-color: transparent;
   background-image: url("../img/index-background-mobile@1x.jpg");
@@ -24,7 +25,9 @@
   background-position-x: center;
 
   @media (min-width: $tablet-width) {
+    align-items: flex-start;
     background: none;
+    min-height: 860px;
   }
 
   @media (min-resolution: 2dppx) {
@@ -34,9 +37,10 @@
 
   @media (min-width: $desktop-width) {
     justify-content: start;
+    min-height: 567px;
+    margin-bottom: 82px;
     z-index: 1;
     background: none;
-    margin-bottom: 136px;
     color: $basic-black;
   }
 }
@@ -46,6 +50,11 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    align-items: flex-start;
+    height: auto;
+  }
 
   @media (min-width: $desktop-width) {
     width: 50%;
@@ -65,7 +74,7 @@
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
-    padding-left: 88px;
+    padding-left: 85px;
     margin-top: 50px;
     margin-bottom: 20px;
     text-align: left;
@@ -76,14 +85,13 @@
 
   @media (min-width: $desktop-width) {
     margin-top: 96px;
-    margin-bottom: 0;
     padding-left: 80px;
   }
 }
 
 .promo__subtitle {
   width: 100%;
-  margin-bottom: 28px;
+  padding-bottom: 285px;
   font-family: $primary-font;
   font-style: normal;
   font-weight: normal;
@@ -94,8 +102,8 @@
   color: $basic-white;
 
   @media (min-width: $tablet-width) {
-    padding-left: 90px;
-    margin-bottom: 20px;
+    padding-left: 88px;
+    padding-bottom: 27px;
     text-align: left;
     font-size: 20px;
     line-height: 20px;
@@ -103,29 +111,35 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 0;
-    margin-bottom: 195px;
     padding-left: 80px;
+    padding-bottom: 30px;
   }
 }
 
 .promo__picture {
+  position: absolute;
+  bottom: 44px;
+  left: 50%;
+  transform: translateX(-50%);
+
   @media (min-width: $tablet-width) {
     background-color: transparent;
-    display: block;
     width: 709px;
     height: auto;
+    top: 250px;
+    z-index: -1;
   }
 
   @media (min-width: $desktop-width) {
     width: 552px;
     height: auto;
-    margin-top: 14px;
-    margin-left: -162px;
+    top: 14px;
+    transform: translateX(-29.5%);
   }
 }
 
 .promo__button {
+  align-self: flex-end;
   padding-top: 11px;
   padding-bottom: 11px;
   font-size: 14px;
@@ -133,17 +147,14 @@
   text-decoration: none;
 
   @media (min-width: $tablet-width) {
-    position: absolute;
-    top: 279px;
-    left: 112px;
     width: 244px;
     height: 54px;
+    margin-left: 82px;
     font-size: 20px;
     line-height: 0px;
   }
 
   @media (min-width: $desktop-width) {
-    top: 328px;
-    left: 190px;
+    margin-left: 80px;
   }
 }
