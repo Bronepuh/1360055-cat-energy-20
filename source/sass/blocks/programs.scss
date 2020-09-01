@@ -1,7 +1,7 @@
 .programs {
   display: flex;
   justify-content: center;
-  padding-top: 23px;
+  padding-top: 22px;
 
   @media (min-width: $tablet-width) {
     padding-top: 0;
@@ -11,6 +11,7 @@
 .programs__list {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -245,7 +246,7 @@
     right: -50px;
     width: 34px;
     height: 12px;
-    background-image: url("../../img/icon-right-arrow-long.svg");
+    background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
     background-size: 100% auto;
 

@@ -15,9 +15,9 @@
   width: 100%;
   flex-grow: 1;
   margin: 0;
-  margin-bottom: 53px;
+  margin-bottom: 51px;
   padding: 0;
-  padding-top: 13px;
+  padding-top: 11px;
   list-style: none;
 
   @media (min-width: $tablet-width) {
@@ -44,9 +44,13 @@
   }
 }
 
+.radio__button:focus + label::before {
+  box-shadow: 0 0 0 1px $basic-black;
+}
+
 .radio__item {
   width: 100%;
-  margin-bottom: 22px;
+  margin-bottom: 23px;
 
   &:last-child {
     margin-bottom: 0;
@@ -59,10 +63,6 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
   }
-}
-
-.radio__button {
-  display: none;
 }
 
 .radio__label {
@@ -86,6 +86,10 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  &:hover::before {
+    border: 1px solid $special-grey-4;
   }
 
   &::before {

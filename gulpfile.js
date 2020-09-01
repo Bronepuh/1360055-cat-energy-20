@@ -6,13 +6,13 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 const csso = require('gulp-csso');
+const htmlmin = require('gulp-htmlmin');
 const rename = require("gulp-rename");
 const webp = require('gulp-webp');
 const del = require('del');
 const svgstore = require('gulp-svgstore');
 
 // Styles
-
 const styles = () => {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -24,16 +24,33 @@ const styles = () => {
     .pipe(csso())
     .pipe(rename("style-min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
 exports.styles = styles;
 
-//Sprite
+//Html
+const html = () => {
+  return gulp.src("source/*.html")
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"))
+    .pipe(sync.stream())
+}
 
+exports.html = html;
+
+//Js
+const js = () => {
+  return gulp.src("source/js/**.js")
+  .pipe(gulp.dest("build/js"))
+}
+
+exports.js = js;
+
+//Sprite
 const sprite = () => {
-  return gulp.src("source/img/**/icon-*.svg")
+  return gulp.src(["source/img/**/icon-*.svg", "source/img/htmlacademy.svg"])
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("source/img"))
@@ -41,31 +58,13 @@ const sprite = () => {
 
 exports.sprite = sprite;
 
-// Server - source
-
-const server = (done) => {
-  sync.init({
-    server: {
-      baseDir: 'source'
-    },
-    cors: true,
-    notify: false,
-    ui: false,
-  });
-  done();
-}
-
-exports.server = server;
-
 // Watcher
-
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 
 //Clean
-
 const clean = () => {
   return del("build");
 }
@@ -73,7 +72,6 @@ const clean = () => {
 exports.clean = clean;
 
 //Copy
-
 const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
@@ -90,6 +88,7 @@ const copy = () => {
 
 exports.copy = copy;
 
+//Webp
 const image = () => {
   return gulp.src("source/img/**/*.{jpg,jpeg,png}")
     .pipe(webp({ quality: 90 }))
@@ -99,19 +98,41 @@ const image = () => {
 
 exports.image = image;
 
-//Start
+//Server
+const server = (done) => {
+  sync.init({
+    server: {
+      baseDir: 'build'
+    },
+    cors: true,
+    notify: false,
+    ui: false,
+  });
+  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/*.html", gulp.series("html")).on("change", sync.reload);
+  gulp.watch("source/js/**.js", gulp.series("js")).on("change", sync.reload);
+  done();
+}
 
-exports.default = gulp.series(
-  styles,
-  sprite,
-  image,
-  server,
-  watcher
-);
+exports.server = server;
 
 //Build
-
 exports.build = gulp.series(
   clean,
-  copy
+  copy,
+  styles,
+  html,
+  js,
+  image,
+);
+
+//Start
+exports.default = gulp.series(
+  clean,
+  copy,
+  styles,
+  html,
+  js,
+  image,
+  server
 );

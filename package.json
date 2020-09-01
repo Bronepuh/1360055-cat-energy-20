@@ -9,6 +9,7 @@
     "del": "^5.1.0",
     "gulp": "4.0.2",
     "gulp-csso": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "8.0.0",
     "gulp-rename": "^2.0.0",
@@ -24,7 +25,8 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    "start": "gulp"
+    "start": "gulp",
+    "dev": "gulp dev"
   },
   "browserslist": [
     "last 2 versions",

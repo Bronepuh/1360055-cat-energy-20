@@ -9,7 +9,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding-top: 11px;
+  padding-top: 12px;
   background-color: transparent;
   border-bottom: 1px solid $basic-grey-2;
 
@@ -64,12 +64,28 @@
   border: none;
   outline: none;
   cursor: pointer;
+  display: none;
 
+  &:focus {
+    opacity: 0.7;
+  }
+
+  // вывод кнопки из невидимости
+  &--js {
+    display: flex;
+    background-image: url("../img/icon-mobile-menu.svg");
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  // смена гамбургера на крестик
   &--close {
     width: 18px;
     height: 18px;
     margin-right: 3px;
-    margin-top: 14px;
+    margin-top: 11px;
     background-image: url("../img/icon-close.svg");
   }
 

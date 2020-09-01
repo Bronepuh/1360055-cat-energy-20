@@ -48,6 +48,7 @@
   min-height: 60px;
   padding-left: 80px;
   margin-bottom: 20px;
+  overflow: hidden;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;

@@ -4,7 +4,7 @@
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -45,5 +45,9 @@
     min-width: 1220px;
     letter-spacing: -0.1px;
     margin-bottom: 41px;
+  }
+
+  &:hover {
+    border: 1px solid $special-grey;
   }
 }

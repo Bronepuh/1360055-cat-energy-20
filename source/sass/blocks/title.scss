@@ -35,7 +35,7 @@
       }
 
       @media (min-width: $desktop-width) {
-        top: 29px;
+        top: 31px;
       }
     }
   }
@@ -58,6 +58,9 @@
   z-index: 1;
 
   @media (min-width: $tablet-width) {
+    padding-left: 39px;
+    margin-left: -39px;
+    padding-right: 40px;
     font-size: 36px;
     line-height: 36px;
   }
@@ -65,5 +68,19 @@
   @media (min-width: $desktop-width) {
     padding-top: 7px;
     margin-left: -37px;
+  }
+
+  &--first {
+    @media (min-width: $tablet-width) {
+      padding-right: 20px;
+    }
+  }
+
+  &--second {
+    @media (min-width: $tablet-width) {
+      padding-left: 0;
+      padding-right: 40px;
+      margin-left: -12px;
+    }
   }
 }

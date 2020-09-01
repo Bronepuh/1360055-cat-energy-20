@@ -22,17 +22,18 @@
   justify-content: space-between;
   width: 100%;
   padding-top: 15px;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 50%;
+    width: 570px;
     height: 201px;
-    margin-top: 50px;
+    margin-top: 95px;
     padding-left: 76px;
+    padding-right: 88px;
     background-color: $basic-white;
 
     &.container {
@@ -101,6 +102,11 @@
     line-height: 0;
     margin-bottom: 10px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    text-align: start;
+  }
 }
 
 .contacts__city {
@@ -114,7 +120,7 @@
 .contacts__map {
   display: flex;
   justify-content: center;
-  height: 362px;
+  height: 360px;
   width: 100%;
 
   @media (min-width: $tablet-width) {
