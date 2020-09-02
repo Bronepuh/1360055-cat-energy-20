@@ -26,38 +26,6 @@
   box-sizing: border-box;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.container {
-  min-width: 319px;
-  max-width: 550px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
-
-  @media (min-width: $tablet-width) {
-    min-width: 767px;
-    max-width: 1000px;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-
-  @media (min-width: $desktop-width) {
-    max-width: 1440px;
-    padding-left: 110px;
-    padding-right: 110px;
-  }
-}
-
 .br {
   @media (min-width: $tablet-width) {
     display: block;

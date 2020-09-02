@@ -5,12 +5,23 @@ const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
-const csso = require('gulp-csso');
-const htmlmin = require('gulp-htmlmin');
+const csso = require("gulp-csso");
+const htmlmin = require("gulp-htmlmin");
 const rename = require("gulp-rename");
-const webp = require('gulp-webp');
-const del = require('del');
-const svgstore = require('gulp-svgstore');
+const webp = require("gulp-webp");
+const del = require("del");
+const svgstore = require("gulp-svgstore");
+
+// Css
+const css = () => {
+  return gulp.src("source/sass/style.scss")
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(gulp.dest("build/css"))
+    .pipe(sync.stream());
+}
+
+exports.css = css;
 
 // Styles
 const styles = () => {
@@ -102,7 +113,7 @@ exports.image = image;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -120,6 +131,7 @@ exports.server = server;
 exports.build = gulp.series(
   clean,
   copy,
+  css,
   styles,
   html,
   js,
@@ -130,6 +142,7 @@ exports.build = gulp.series(
 exports.default = gulp.series(
   clean,
   copy,
+  css,
   styles,
   html,
   js,
