@@ -234,6 +234,17 @@
   text-decoration: none;
   color: $basic-black;
 
+  @media (min-width: $tablet-width) {
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 3px;
+    padding-top: 0;
+  }
+
   &:active {
     opacity: 0.3;
   }
@@ -261,14 +272,7 @@
     }
   }
 
-  @media (min-width: $tablet-width) {
-    margin-top: 10px;
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-top: 3px;
-    padding-top: 0;
+  &:hover::after {
+    background-image: url("../img/icon-right-arrow-verylong.svg");
   }
 }

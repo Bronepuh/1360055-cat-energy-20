@@ -124,6 +124,14 @@
     border: 1px solid $special-grey;
   }
 
+  &:focus {
+    outline: 2px solid $text-color;
+  }
+
+  &::placeholder {
+    color: $text-color;
+  }
+
   &--email {
     flex-grow: 1;
     margin-left: 10px;
