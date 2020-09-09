@@ -1,4 +1,6 @@
 .pagination {
+  order: 1;
+
   @media (min-width: $tablet-width) {
     padding-top: 74px;
   }
@@ -102,15 +104,14 @@
 
 .pagination__button {
   font-size: 16px;
-  line-height: 0px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     align-self: flex-end;
     height: 40px;
     font-size: 16px;
-    line-height: 0px;
   }
 
   @media (min-width: $desktop-width) {

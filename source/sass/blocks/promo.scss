@@ -143,15 +143,14 @@
   padding-top: 11px;
   padding-bottom: 11px;
   font-size: 14px;
-  line-height: 18px;
   text-decoration: none;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     width: 244px;
     height: 54px;
     margin-left: 82px;
     font-size: 20px;
-    line-height: 0px;
   }
 
   @media (min-width: $desktop-width) {
